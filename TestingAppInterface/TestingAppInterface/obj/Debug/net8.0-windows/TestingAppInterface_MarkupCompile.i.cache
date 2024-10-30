@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\PortableGit\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows\
+D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows\
 TestingAppInterface
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\PortableGit\TestingApplication\TestingAppInterface\TestingAppInterface\App.xaml
-11407045341
+D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\App.xaml
+21940794329
 
-6-206901969
+7722437743
 1981124507420
-MainWindow.xaml;
+MainWindow.xaml;Window1.xaml;
 
-False
+True
 
