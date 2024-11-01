@@ -1,5 +1,5 @@
 ﻿TestingAppInterface
-1.0.0.0
+
 
 winexe
 C#
@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\App.xaml
 21940794329
 
-7722437743
+5-213390008
 1981124507420
 MainWindow.xaml;Window1.xaml;
 
