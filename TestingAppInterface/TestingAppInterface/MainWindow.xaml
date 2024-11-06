@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestingAppInterface"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="Перевод единиц информации" Height="500" Width="800" MinHeight="500" MinWidth="800">
     <Grid Background="White">
 
         <TextBlock HorizontalAlignment="Center" Height="146" Margin="0,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="650" FontFamily="Bahnschrift Light Condensed" FontSize="48" Text="Перевод единиц информации" FontWeight="Bold" TextAlignment="Center" RenderTransformOrigin="0.5,0.5"/>
 
-        <Button x:Name="ButtonTraining" Content="Начать Тренировку" HorizontalAlignment="Left" Height="130" Margin="494,0,0,0" VerticalAlignment="Center" Width="250" Click="Button_Click" FontFamily="Bahnschrift Condensed" FontSize="24" Opacity="0.82" Foreground="White" Background="#FF0032FF" Panel.ZIndex="52" BorderThickness="1,1,1,1" RenderTransformOrigin="-4,0.5" >
+        <Button x:Name="ButtonTraining" Content="Начать Тренировку" HorizontalAlignment="Right" Height="130" Margin="10,150" VerticalAlignment="Bottom" Width="250" Click="Button_Click" FontFamily="Bahnschrift Condensed" FontSize="24" Opacity="0.82" Foreground="White" Background="#FF0032FF" Panel.ZIndex="52" BorderThickness="1,1,1,1" RenderTransformOrigin="-4,0.5" >
             <Button.Style>
 
                 <Style/>
@@ -29,7 +29,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="ButtonTraining_Копировать" Content="Начать Тестирование" HorizontalAlignment="Left" Height="135" Margin="494,325,0,0" VerticalAlignment="Top" Width="250" Click="Button_Click" FontFamily="Bahnschrift Condensed" FontSize="24" Opacity="0.82" Foreground="Black" Background="#FFD9D9D9" Panel.ZIndex="52" BorderThickness="1,1,1,1" RenderTransformOrigin="-4,0.5" >
+        <Button x:Name="ButtonTraining_Копировать" Content="Начать Тестирование" HorizontalAlignment="Right" Height="135" Margin="10,10" VerticalAlignment="Bottom" Width="250" Click="Button_Click" FontFamily="Bahnschrift Condensed" FontSize="24" Opacity="0.82" Foreground="Black" Background="#FFD9D9D9" Panel.ZIndex="52" BorderThickness="1,1,1,1" RenderTransformOrigin="-4,0.5" >
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="25"/>
