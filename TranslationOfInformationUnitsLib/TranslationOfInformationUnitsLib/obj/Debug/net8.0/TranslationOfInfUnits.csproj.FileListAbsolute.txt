@@ -1,0 +1,12 @@
+D:\С#_study\TestingApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\TranslationOfInfUnits.GeneratedMSBuildEditorConfig.editorconfig
+D:\С#_study\TestingApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\TranslationOfInfUnits.AssemblyInfoInputs.cache
+D:\С#_study\TestingApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\TranslationOfInfUnits.AssemblyInfo.cs
+D:\С#_study\TestingApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\TranslationOfInfUnits.csproj.CoreCompileInputs.cache
+D:\С#_study\TestingApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\TranslationOfInfUnits.sourcelink.json
+D:\С#_study\TestingApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\bin\Debug\net8.0\TranslationOfInfUnits.deps.json
+D:\С#_study\TestingApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\bin\Debug\net8.0\TranslationOfInfUnits.dll
+D:\С#_study\TestingApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\bin\Debug\net8.0\TranslationOfInfUnits.pdb
+D:\С#_study\TestingApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\TranslationOfInfUnits.dll
+D:\С#_study\TestingApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\refint\TranslationOfInfUnits.dll
+D:\С#_study\TestingApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\TranslationOfInfUnits.pdb
+D:\С#_study\TestingApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\ref\TranslationOfInfUnits.dll
