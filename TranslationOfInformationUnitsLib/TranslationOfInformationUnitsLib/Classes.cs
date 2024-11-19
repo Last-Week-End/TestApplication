@@ -1,78 +1,52 @@
 ﻿namespace TranslationOfInfUnits
 {
-    public abstract class Generator
+    interface IGenerator
     {
-        protected Number firstNumber;
-        protected Number secondNumber;
-
         public abstract Exercise GenerateExercise();
-        public abstract long GenerateAnswer();
+        public abstract long GenerateAnswer(List<Number> exerciseData);
     }
-    public class GeneratorTranslate : Generator
+    public class GeneratorTranslate : IGenerator
     {
-        public override Exercise GenerateExercise()
+        public Exercise GenerateExercise()
         {
             RandomNumber random = new RandomNumber();
-            firstNumber = random.Generate();
-            secondNumber = random.Generate();
-            
-            long answer = GenerateAnswer();
 
             List<Number> exerciseData = new List<Number>()
             {
-                firstNumber,
+                random.Generate()
             };
 
+            long answer = GenerateAnswer(exerciseData);
             return new Exercise(exerciseData, answer);
         }
-        public override long GenerateAnswer()
-        {
-            if(secondNumber.NumberType == "bit")
-            {
-                return Translate.ToBit(firstNumber).Value;
-            }
-            else if (secondNumber.NumberType == "byte")
-            {
-                return Translate.ToByte(firstNumber).Value;
-            }
-            else if (secondNumber.NumberType == "kbyte")
-            {
-                return Translate.ToKbyte(firstNumber).Value;
-            }
-            else if (secondNumber.NumberType == "mbyte")
-            {
-                return Translate.ToMbyte(firstNumber).Value;
-            }
-            else
-            {
-                return Translate.ToGbyte(firstNumber).Value;
-            }
-        }
-    }
-    public class GeneratorComparison: Generator
-    {
-        public override Exercise GenerateExercise()
+        public long GenerateAnswer(List<Number> exerciseData)
         {
             RandomNumber random = new RandomNumber();
 
-            firstNumber = random.Generate();
-            secondNumber = random.Generate();
+            return Translate.TranslateTo(exerciseData[0], random.RandomNumberType()).Value;
+        }
+    }
+    public class GeneratorComparison: IGenerator
+    {
+        public Exercise GenerateExercise()
+        {
+            RandomNumber random = new RandomNumber();
             
             List<Number> exerciseData = new List<Number>() 
-            { 
-                firstNumber,
-                secondNumber,
+            {
+                random.Generate(),
+                random.Generate()
             };
-            long answer = GenerateAnswer();
+            long answer = GenerateAnswer(exerciseData);
             return new Exercise(exerciseData, answer);
         }
-        public override long GenerateAnswer()
+        public long GenerateAnswer(List<Number> exerciseData)
         {
-            if (Translate.ToBit(firstNumber) > Translate.ToBit(secondNumber))
+            if (Translate.ToBit(exerciseData[0]) > Translate.ToBit(exerciseData[1]))
             {
                 return 1;
             }
-            else if (Translate.ToBit(firstNumber) < Translate.ToBit(secondNumber))
+            else if (Translate.ToBit(exerciseData[0]) < Translate.ToBit(exerciseData[1]))
             {
                 return -1;
             }
@@ -81,6 +55,27 @@
     }
     public static class Translate
     {
+        public static Number TranslateTo(Number number, string type)
+        {
+            switch (type)
+            {
+                case "bit":
+                    return ToBit(number);
+
+                case "byte":
+                    return ToByte(number);
+
+                case "kbyte":
+                    return ToKbyte(number);
+
+                case "mbyte":
+                    return ToMbyte(number);
+
+                case "gbyte":
+                    return ToGbyte(number); ;
+            }
+            return number;
+        }
         public static Number ToBit(Number number)
         {
             switch (number.NumberType)
@@ -99,26 +94,25 @@
                     
                 case "gbyte":
                     return new Number("bit", number.Value * 8000000000);
-                    
             }
             return number;
         }
-        public static Number ToByte(Number number)
+        private static Number ToByte(Number number)
         {
             number = new Number("byte",ToBit(number).Value/8);
             return number;
         }
-        public static Number ToKbyte(Number number)
+        private static Number ToKbyte(Number number)
         {
             number = new Number("kbyte",ToBit(number).Value/8000);
             return number;
         }
-        public static Number ToMbyte(Number number)
+        private static Number ToMbyte(Number number)
         {
             number = new Number("mbyte", ToBit(number).Value / 8000000);
             return number;
         }
-        public static Number ToGbyte(Number number)
+        private static Number ToGbyte(Number number)
         {
             number = new Number("gbyte", ToBit(number).Value / 8000000000);
             return number;
@@ -192,8 +186,8 @@
     }
     public class Exercise
     {
-        public List<Number> ExerciseData { get; set; }
-        public long Answer { get; set; }
+        public List<Number> ExerciseData { get; private set; }
+        public long Answer { get; private set; }
         public Exercise(List<Number> _exerciseData, long _answer)
         {
             ExerciseData = _exerciseData;

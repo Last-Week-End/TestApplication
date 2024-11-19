@@ -6,13 +6,11 @@
         xmlns:local="clr-namespace:TestingAppInterface"
         mc:Ignorable="d"
         Title="Перевод единиц информации" Height="500" Width="800" MinHeight="500" MinWidth="800">
-    <Grid Background="White">
-
+    <Viewbox Grid.Row="1" Stretch="Fill">
+        <Grid x:Name="MainGrid" Background="AliceBlue" Height="500" Width="800">
         <TextBlock HorizontalAlignment="Center" Height="146" Margin="0,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="650" FontFamily="Bahnschrift Light Condensed" FontSize="48" Text="Перевод единиц информации" FontWeight="Bold" TextAlignment="Center" RenderTransformOrigin="0.5,0.5"/>
-
         <Button x:Name="ButtonTraining" Content="Начать Тренировку" HorizontalAlignment="Right" Height="130" Margin="10,150" VerticalAlignment="Bottom" Width="250" Click="Button_Click" FontFamily="Bahnschrift Condensed" FontSize="24" Opacity="0.82" Foreground="White" Background="#FF0032FF" Panel.ZIndex="52" BorderThickness="1,1,1,1" RenderTransformOrigin="-4,0.5" >
             <Button.Style>
-
                 <Style/>
             </Button.Style>
             <Button.RenderTransform>
@@ -36,7 +34,6 @@
                 </Style>
             </Button.Resources>
             <Button.Style>
-
                 <Style/>
             </Button.Style>
             <Button.RenderTransform>
@@ -48,9 +45,6 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-
     </Grid>
-
-
-
+    </Viewbox>
 </Window>
