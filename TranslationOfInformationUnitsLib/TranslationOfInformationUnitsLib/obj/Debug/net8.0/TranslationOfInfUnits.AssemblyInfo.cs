@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TranslationOfInfUnits")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1146a2e8ab50e1a345852459947aaf900f5c7bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+942a6a448d2d8217f3f3cef5a6b9cdd1f875da65")]
 [assembly: System.Reflection.AssemblyProductAttribute("TranslationOfInfUnits")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TranslationOfInfUnits")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

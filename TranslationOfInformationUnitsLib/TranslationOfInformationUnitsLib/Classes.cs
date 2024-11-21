@@ -1,13 +1,13 @@
 ﻿namespace TranslationOfInfUnits
 {
-    interface IGenerator
+    public interface IGenerator
     {
-        public abstract Exercise GenerateExercise();
-        public abstract long GenerateAnswer(List<Number> exerciseData);
+        public  List<Number> GenerateData();
+        public string GenerateAnswer(List<Number> exerciseData);
     }
     public class GeneratorTranslate : IGenerator
     {
-        public Exercise GenerateExercise()
+        public  List<Number> GenerateData()
         {
             RandomNumber random = new RandomNumber();
 
@@ -15,20 +15,18 @@
             {
                 random.Generate()
             };
-
-            long answer = GenerateAnswer(exerciseData);
-            return new Exercise(exerciseData, answer);
+            return exerciseData;
         }
-        public long GenerateAnswer(List<Number> exerciseData)
+        public string GenerateAnswer(List<Number> exerciseData)
         {
             RandomNumber random = new RandomNumber();
-
-            return Translate.TranslateTo(exerciseData[0], random.RandomNumberType()).Value;
+            string type = random.RandomNumberType(0,5);
+            return Translate.TranslateTo(exerciseData[0], type).Value.ToString() + " " +type.ToString();
         }
     }
     public class GeneratorComparison: IGenerator
     {
-        public Exercise GenerateExercise()
+        public List<Number> GenerateData()
         {
             RandomNumber random = new RandomNumber();
             
@@ -37,20 +35,19 @@
                 random.Generate(),
                 random.Generate()
             };
-            long answer = GenerateAnswer(exerciseData);
-            return new Exercise(exerciseData, answer);
+            return exerciseData;
         }
-        public long GenerateAnswer(List<Number> exerciseData)
+        public string GenerateAnswer(List<Number> exerciseData)
         {
             if (Translate.ToBit(exerciseData[0]) > Translate.ToBit(exerciseData[1]))
             {
-                return 1;
+                return ">";
             }
             else if (Translate.ToBit(exerciseData[0]) < Translate.ToBit(exerciseData[1]))
             {
-                return -1;
+                return "<";
             }
-            else return 0;
+            else return "=";
         }
     }
     public static class Translate
@@ -87,13 +84,13 @@
                     return new Number("bit", number.Value * 8);
                     
                 case "kbyte":
-                    return new Number("bit", number.Value * 8000);
+                    return new Number("bit", number.Value * 8192);
                     
                 case "mbyte":
-                    return new Number("bit", number.Value * 8000000);
+                    return new Number("bit", number.Value * 8388608);
                     
                 case "gbyte":
-                    return new Number("bit", number.Value * 8000000000);
+                    return new Number("bit", number.Value * 8589934592);
             }
             return number;
         }
@@ -104,17 +101,17 @@
         }
         private static Number ToKbyte(Number number)
         {
-            number = new Number("kbyte",ToBit(number).Value/8000);
+            number = new Number("kbyte",ToBit(number).Value/ 8192);
             return number;
         }
         private static Number ToMbyte(Number number)
         {
-            number = new Number("mbyte", ToBit(number).Value / 8000000);
+            number = new Number("mbyte", ToBit(number).Value / 8388608);
             return number;
         }
         private static Number ToGbyte(Number number)
         {
-            number = new Number("gbyte", ToBit(number).Value / 8000000000);
+            number = new Number("gbyte", ToBit(number).Value / 8589934592);
             return number;
         }
     }
@@ -131,7 +128,7 @@
         public Number Generate()
         {
             Random random = new Random();
-            string informationType = RandomNumberType();
+            string informationType = RandomNumberType(0,5);
             Number number = new Number();
 
             if (informationType == "bit")
@@ -156,9 +153,9 @@
             }
             return number;
         }
-        public string RandomNumberType()
+        public string RandomNumberType(int start, int end)
         {
-            return InformationType[new Random().Next(0, 4)];
+            return InformationType[new Random().Next(start, end)];
         }
     }
     public class Number
@@ -187,11 +184,11 @@
     public class Exercise
     {
         public List<Number> ExerciseData { get; private set; }
-        public long Answer { get; private set; }
-        public Exercise(List<Number> _exerciseData, long _answer)
+        public string Answer { get; private set; }
+        public Exercise(IGenerator generator)
         {
-            ExerciseData = _exerciseData;
-            Answer = _answer;
+            ExerciseData = generator.GenerateData();
+            Answer = generator.GenerateAnswer(ExerciseData);
         }
     }
     
