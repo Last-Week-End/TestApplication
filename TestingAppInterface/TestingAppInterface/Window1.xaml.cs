@@ -25,6 +25,11 @@ namespace TestingAppInterface
             this.Width = width;
             this.Height = height;
         }
+        public Window1()
+        {
+            InitializeComponent();
+            
+        }
 
         private void ButtonTraining_Click(object sender, RoutedEventArgs e)
         {
@@ -34,6 +39,10 @@ namespace TestingAppInterface
         private void Next_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void Close(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
