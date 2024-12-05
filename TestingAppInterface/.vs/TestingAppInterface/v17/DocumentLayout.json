@@ -7,12 +7,8 @@
       "RelativeMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|solutionrelative:testingappinterface\\resulttest.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|d:\\project\\testapplication\\testingappinterface\\testingappinterface\\training.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|solutionrelative:testingappinterface\\training.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|d:\\project\\testapplication\\testingappinterface\\testingappinterface\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|solutionrelative:testingappinterface\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|d:\\project\\testapplication\\testingappinterface\\testingappinterface\\resulttest.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|solutionrelative:testingappinterface\\resulttest.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\il1ya\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\TestingAppInterface\\TestingAppInterface\\Window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -22,12 +18,20 @@
       "RelativeMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|solutionrelative:testingappinterface\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|d:\\project\\testapplication\\testingappinterface\\testingappinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|solutionrelative:testingappinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|d:\\project\\testapplication\\testingappinterface\\testingappinterface\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|solutionrelative:testingappinterface\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|d:\\project\\testapplication\\testingappinterface\\testingappinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|solutionrelative:testingappinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|d:\\project\\testapplication\\testingappinterface\\testingappinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|solutionrelative:testingappinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|d:\\project\\testapplication\\testingappinterface\\testingappinterface\\training.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|solutionrelative:testingappinterface\\training.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{48A1B2CD-A65C-411A-92B2-3E9A31CDC0D0}|TestingAppInterface\\TestingAppInterface.csproj|d:\\project\\testapplication\\testingappinterface\\testingappinterface\\testingappinterface.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -45,8 +49,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ResultTest.xaml.cs",
+              "DocumentMoniker": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\ResultTest.xaml.cs",
+              "RelativeDocumentMoniker": "TestingAppInterface\\ResultTest.xaml.cs",
+              "ToolTip": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\ResultTest.xaml.cs",
+              "RelativeToolTip": "TestingAppInterface\\ResultTest.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T20:06:29.631Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -61,30 +78,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Training.xaml",
               "DocumentMoniker": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\Training.xaml",
               "RelativeDocumentMoniker": "TestingAppInterface\\Training.xaml",
               "ToolTip": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\Training.xaml",
               "RelativeToolTip": "TestingAppInterface\\Training.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-05T15:43:26.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T15:43:26.275Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Window1.xaml.cs",
               "DocumentMoniker": "C:\\Users\\il1ya\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\TestingAppInterface\\TestingAppInterface\\Window1.xaml.cs",
               "ToolTip": "C:\\Users\\il1ya\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\TestingAppInterface\\TestingAppInterface\\Window1.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAIwCcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-05T15:41:08.624Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TestingAppInterface",
               "DocumentMoniker": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\TestingAppInterface.csproj",
               "RelativeDocumentMoniker": "TestingAppInterface\\TestingAppInterface.csproj",
@@ -96,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Window1.xaml",
               "DocumentMoniker": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\Window1.xaml",
               "RelativeDocumentMoniker": "TestingAppInterface\\Window1.xaml",
@@ -108,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\App.xaml",
               "RelativeDocumentMoniker": "TestingAppInterface\\App.xaml",
@@ -120,38 +136,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\MainWindow.xaml",
               "RelativeDocumentMoniker": "TestingAppInterface\\MainWindow.xaml",
               "ToolTip": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\MainWindow.xaml",
               "RelativeToolTip": "TestingAppInterface\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-30T18:40:30.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T18:40:30.699Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "TestingAppInterface\\MainWindow.xaml.cs",
               "ToolTip": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\MainWindow.xaml.cs",
               "RelativeToolTip": "TestingAppInterface\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAIwBEAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwCQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T18:40:24.272Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Window1.xaml.cs",
               "DocumentMoniker": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\Window1.xaml.cs",
               "RelativeDocumentMoniker": "TestingAppInterface\\Window1.xaml.cs",
               "ToolTip": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\Window1.xaml.cs",
               "RelativeToolTip": "TestingAppInterface\\Window1.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAIwCcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T14:46:27.171Z",
               "EditorCaption": ""

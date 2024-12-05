@@ -24,3 +24,7 @@ D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\TestingAppInterface.pdb
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\TestingAppInterface.genruntimeconfig.cache
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\ref\TestingAppInterface.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\ResultTest.g.cs
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\Training.g.cs
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\ResultTest.baml
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\Training.baml

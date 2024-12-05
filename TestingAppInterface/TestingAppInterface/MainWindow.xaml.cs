@@ -33,7 +33,9 @@ namespace TestingAppInterface
             Window1 window = new Window1(this.Width, this.Height);
 
             mainwindow.Close();
-            window.Show();
+            window.ShowDialog();
+            //NavigationService nav = new NavigationService;
+            //nav 
         }
     }
 }
