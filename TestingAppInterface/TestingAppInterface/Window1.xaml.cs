@@ -19,9 +19,21 @@ namespace TestingAppInterface
     /// </summary>
     public partial class Window1 : Window
     {
-        public Window1()
+        public Window1(double width, double height)
         {
             InitializeComponent();
+            this.Width = width;
+            this.Height = height;
+        }
+
+        private void ButtonTraining_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

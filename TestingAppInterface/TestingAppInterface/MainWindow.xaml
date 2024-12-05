@@ -5,46 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestingAppInterface"
         mc:Ignorable="d"
-        Title="Перевод единиц информации" Height="500" Width="800" MinHeight="500" MinWidth="800">
-    <Viewbox Grid.Row="1" Stretch="Fill">
-        <Grid x:Name="MainGrid" Background="AliceBlue" Height="500" Width="800">
-        <TextBlock HorizontalAlignment="Center" Height="146" Margin="0,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="650" FontFamily="Bahnschrift Light Condensed" FontSize="48" Text="Перевод единиц информации" FontWeight="Bold" TextAlignment="Center" RenderTransformOrigin="0.5,0.5"/>
-        <Button x:Name="ButtonTraining" Content="Начать Тренировку" HorizontalAlignment="Right" Height="130" Margin="10,150" VerticalAlignment="Bottom" Width="250" Click="Button_Click" FontFamily="Bahnschrift Condensed" FontSize="24" Opacity="0.82" Foreground="White" Background="#FF0032FF" Panel.ZIndex="52" BorderThickness="1,1,1,1" RenderTransformOrigin="-4,0.5" >
-            <Button.Style>
-                <Style/>
-            </Button.Style>
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="25"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button x:Name="ButtonTraining_Копировать" Content="Начать Тестирование" HorizontalAlignment="Right" Height="135" Margin="10,10" VerticalAlignment="Bottom" Width="250" Click="Button_Click" FontFamily="Bahnschrift Condensed" FontSize="24" Opacity="0.82" Foreground="Black" Background="#FFD9D9D9" Panel.ZIndex="52" BorderThickness="1,1,1,1" RenderTransformOrigin="-4,0.5" >
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="25"/>
-                </Style>
-            </Button.Resources>
-            <Button.Style>
-                <Style/>
-            </Button.Style>
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-    </Grid>
+        Title="MainWindow" Height="500" Width="800">
+    <Viewbox Stretch="Uniform">
+        <Grid Background="White" Width="800" Height="500">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="16*"/>
+                <ColumnDefinition Width="371*"/>
+                <ColumnDefinition Width="Auto" MinWidth="383"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Заголовок -->
+
+
+            <TextBlock TextWrapping="Wrap" Margin="0,0,-12,0" Grid.ColumnSpan="4" FontSize="20" Grid.Row="1" Foreground="#FF0032FF" FontFamily="Wide Latin" Opacity="0.25"><Run Text="100010101010101001010101010110101010110100110100110101100101011010101010"/><Run Text="10101000101011000101101010100101010101001011010101010101010101010101010101010101011010101010101000101111101001010110101010101010101010101010100010101010101011101001010101100101101010100110010101011010101010100101010101010101010101010010110100101010101100101001111001001010101100101010101010101010101011001010110101000101010101010101011010101010100010111010101010101011010011101010101101010101010011010101001101010010101010101010101010101101011010101010101010101001010110101010101010101010101010001111010101010101010101010101010101010101010101010101010101010100101101010010101011010101001101010010110010101010101010100101010101001011010110101010100101010101011011010100101010101011010"/><LineBreak/><Run/><Run Text="                        "/></TextBlock>
+
+            <!-- Кнопка "Начать Тренировку" -->
+            <Button x:Name="ButtonTraining" Content="Начать Тренировку" Click="ButtonTraining_Click" Grid.Row="1" Grid.Column="3" VerticalAlignment="Top" 
+                    FontFamily="Bahnschrift Light" FontSize="24" Opacity="0.82" Foreground="White" 
+                    Background="#FF0032FF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
+                    Height="104" Margin="0,329,0,0" HorizontalAlignment="Right" Width="315">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <!-- Кнопка "Начать Тестирование" -->
+            <Button x:Name="ButtonTesting" Content="Начать Тестирование" Grid.Row="1" 
+                    HorizontalAlignment="Right" VerticalAlignment="Top" 
+                    FontFamily="Bahnschrift Light" FontSize="24" Opacity="0.82" Foreground="Black" 
+                    Background="#FFD9D9D9" BorderThickness="1" RenderTransformOrigin="0.5,0.5" 
+                    Margin="0,145,-12,0" Padding="10" Height="105" Width="315" Grid.Column="3" >
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top" 
+                       TextWrapping="Wrap" FontFamily="Bahnschrift Light Condensed" FontSize="48" 
+                       Text="Перевод единиц информации" FontWeight="Bold" TextAlignment="Center" 
+                       RenderTransformOrigin="0.5,0.5" Margin="0,10,84,0" Height="84" Width="597" Grid.Column="2" Grid.RowSpan="2" Foreground="#FF020101" Background="White"
+                       
+        
+                />
+            <!-- Заголовок -->
+        </Grid>
     </Viewbox>
 </Window>
