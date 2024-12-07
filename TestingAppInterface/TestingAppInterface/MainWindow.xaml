@@ -5,20 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestingAppInterface"
         mc:Ignorable="d"
+        WindowState="Maximized"
         Title="MainWindow" Height="500" Width="800">
+        
     <Viewbox Stretch="Uniform">
         <Grid Background="White" Width="800" Height="500">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="30*"/>
-                <ColumnDefinition Width="16*"/>
-                <ColumnDefinition Width="371*"/>
-                <ColumnDefinition Width="Auto" MinWidth="383"/>
-            </Grid.ColumnDefinitions>
+            
 
             <!-- Заголовок -->
 

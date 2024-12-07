@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,7 +22,15 @@ namespace TestingAppInterface
         {
             InitializeComponent();
 
+
         }
+        public static class WindowStateManeger
+        {
+            public static WindowState WindowState { get; set; } = WindowState.Maximized;
+            public static WindowStyle WindowStyle { get; set; }= WindowStyle.SingleBorderWindow;
+
+        }
+
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -36,9 +45,10 @@ namespace TestingAppInterface
             //window.ShowDialog();
             //NavigationService nav = new NavigationService;
             //nav 
-            var window2 = new Window1();
+            var window2 = new Training();
             Content = null;
             Content = window2.Content;
+            
         }
         private void Close(object sender, RoutedEventArgs e)
         {

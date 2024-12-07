@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PHsjIZIyMGA=",
+  "dgSpecHash": "q7PW2Yo5WEY=",
   "success": true,
-  "projectFilePath": "D:\\С#_study\\TestingApplication\\TestingAppInterface\\TestingAppInterface\\TestingAppInterface.csproj",
+  "projectFilePath": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\TestingAppInterface.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\user1\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.54\\microsoft.windows.sdk.net.ref.10.0.17763.54.nupkg.sha512"
+    "C:\\Users\\il1ya\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.54\\microsoft.windows.sdk.net.ref.10.0.17763.54.nupkg.sha512"
   ],
   "logs": []
 }

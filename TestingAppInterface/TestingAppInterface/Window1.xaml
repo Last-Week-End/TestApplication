@@ -6,27 +6,17 @@
         xmlns:local="clr-namespace:TestingAppInterface"
         mc:Ignorable="d"
         Title="Тестирование" Height="500" Width="800" Uid="win1">
-
-    <Grid Background="White">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
-
+    
+        <Grid Background="White" Height="8967">
+        
         <!-- Заголовок -->
         <TextBlock TextWrapping="Wrap" Text="1010101010101101010101010101010101010101100101101010000000000111111111111101010101010110010110101010101010101010100101010101010101010101010011010101001011010101001010101101010101001011001011001101010101101010101010011010101010101011010101010011010100101010110011010011010101010101010101010101010101010101010101101010010110101010101010101011010101010101010101010101010101010010101101110100101101010010101010101010101010101010101010101010101010101010101010101010101011010101010101001101001010101010101010111001010101011100101010001011010011001101010110101010101001010110010101010110010101010101010101010101011010011" Margin="0,-3,0,0" Grid.RowSpan="4" FontFamily="Wide Latin" FontSize="22" Foreground="#FF0032FF" Opacity="0.2"/>
-        <TextBlock TextWrapping="Wrap" Text="TextBlock" Margin="91,40,104,178" Grid.Row="1" Background="White"/>
-        <TextBox TextWrapping="Wrap" Text="TextBox" Margin="91,347,406,116" Grid.Row="1"/>
-        <Button Content="Ответить" x:Name="ButtonTraining" Grid.Row="1" VerticalAlignment="Top" 
+        <TextBlock TextWrapping="Wrap" Text="TextBlock" Margin="91,40,104,178"  Background="White"/>
+            <TextBox TextWrapping="Wrap" Text="TextBox" Margin="91,347,406,116" />
+            <Button Content="Ответить" x:Name="ButtonTraining" Grid.Row="1" VerticalAlignment="Top" 
                     FontFamily="Bahnschrift Light" FontSize="24" Foreground="White" 
                     Background="#FFAFAFAF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
-                    Height="44" Margin="0,336,138,0" HorizontalAlignment="Right" Width="146" Click="ButtonTraining_Click" Opacity="0.98">
+                    Height="44" Margin="0,800,0,0" HorizontalAlignment="Right" Width="146" Click="ButtonTraining_Click" Opacity="0.98">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="25"/>
@@ -66,5 +56,6 @@
 
 
     </Grid>
+    
 
 </Window>

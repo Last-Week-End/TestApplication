@@ -44,5 +44,6 @@ namespace TestingAppInterface
         {
             Close();
         }
+
     }
 }
