@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace TranslationOfInfUnits
 {
     public interface IGenerator
     {
-        public List<Number> GenerateData();
-        public string GenerateAnswer(List<Number> exerciseData);
+        public (string,string) GenerateAllData();
+        //public string GenerateAnswer(List<Number> exerciseData, string type = "");
     }
     public class GeneratorTranslate : IGenerator
     {
-        public List<Number> GenerateData()
+        public (string,string) GenerateAllData()
         {
             RandomNumber random = new RandomNumber();
 
@@ -16,18 +17,21 @@ namespace TranslationOfInfUnits
             {
                 random.GenerateNumber(new Number())
             };
-            return exerciseData;
+            string type = random.GenerateType(exerciseData[0].Type);
+            string answer = GenerateAnswer(exerciseData, type);
+            string exerciseText = $"Переведите {exerciseData[0].Value} {exerciseData[0].Type} в {type}. " +
+                                  $"Ответ округлите до целых.";
+            return (exerciseText,answer);
         }
-        public string GenerateAnswer(List<Number> exerciseData)
+        public string GenerateAnswer(List<Number> exerciseData, string type)
         {
             RandomNumber random = new RandomNumber();
-            string type = random.GenerateType(exerciseData[0].Type);
             return Translate.TranslateTo(exerciseData[0], type).Value.ToString() + " " + type.ToString();
         }
     }
     public class GeneratorComparison : IGenerator
     {
-        public List<Number> GenerateData()
+        public (string,string) GenerateAllData()
         {
             RandomNumber random = new RandomNumber();
             Number firstNumber = random.GenerateNumber(new Number());
@@ -38,7 +42,11 @@ namespace TranslationOfInfUnits
                 firstNumber,
                 secondNumber
             };
-            return exerciseData;
+            string answer = GenerateAnswer(exerciseData);
+            string exerciseText = $"Сравните {exerciseData[0].Value} {exerciseData[0].Type} и " +
+                                  $"{exerciseData[1].Value} {exerciseData[1].Type}. " +
+                                  $"В ответе напишите >, < или =. ";
+            return (exerciseText,answer);
         }
         public string GenerateAnswer(List<Number> exerciseData)
         {
@@ -59,19 +67,19 @@ namespace TranslationOfInfUnits
         {
             switch (type)
             {
-                case "bit":
+                case "Бит":
                     return ToBit(number);
 
-                case "byte":
+                case "Байт":
                     return ToByte(number);
 
-                case "kbyte":
+                case "Кбайт":
                     return ToKbyte(number);
 
-                case "mbyte":
+                case "Мбайт":
                     return ToMbyte(number);
 
-                case "gbyte":
+                case "Гбайт":
                     return ToGbyte(number); ;
             }
             return number;
@@ -80,41 +88,41 @@ namespace TranslationOfInfUnits
         {
             switch (number.Type)
             {
-                case "bit":
+                case "Бит":
                     return number;
 
-                case "byte":
-                    return new Number("bit", number.Value * 8);
+                case "Байт":
+                    return new Number("Бит", number.Value * 8);
 
-                case "kbyte":
-                    return new Number("bit", number.Value * 8192);
+                case "Кбайт":
+                    return new Number("Бит", number.Value * 8192);
 
-                case "mbyte":
-                    return new Number("bit", number.Value * 8388608);
+                case "Мбайт":
+                    return new Number("Бит", number.Value * 8388608);
 
-                case "gbyte":
-                    return new Number("bit", number.Value * 8589934592);
+                case "Гбайт":
+                    return new Number("Бит", number.Value * 8589934592);
             }
             return number;
         }
         private static Number ToByte(Number number)
         {
-            number = new Number("byte", ToBit(number).Value / 8);
+            number = new Number("Байт", ToBit(number).Value / 8);
             return number;
         }
         private static Number ToKbyte(Number number)
         {
-            number = new Number("kbyte", ToBit(number).Value / 8192);
+            number = new Number("Кбайт", ToBit(number).Value / 8192);
             return number;
         }
         private static Number ToMbyte(Number number)
         {
-            number = new Number("mbyte", ToBit(number).Value / 8388608);
+            number = new Number("Мбайт", ToBit(number).Value / 8388608);
             return number;
         }
         private static Number ToGbyte(Number number)
         {
-            number = new Number("gbyte", ToBit(number).Value / 8589934592);
+            number = new Number("Гбайт", ToBit(number).Value / 8589934592);
             return number;
         }
     }
@@ -144,12 +152,13 @@ namespace TranslationOfInfUnits
     }
     public class Exercise
     {
-        public List<Number> ExerciseData { get; private set; }
+        public string Data { get; private set; }
         public string Answer { get; private set; }
         public Exercise(IGenerator generator)
         {
-            ExerciseData = generator.GenerateData();
-            Answer = generator.GenerateAnswer(ExerciseData);
+            (string, string) AllData = generator.GenerateAllData();
+            Data = AllData.Item1;
+            Answer = AllData.Item2;
         }
     }
     public class RandomNumber
@@ -157,11 +166,11 @@ namespace TranslationOfInfUnits
         private readonly Dictionary<string, int> units = new Dictionary<string, int>
         {
             { "notype", 0 },
-            { "bit", 1 },
-            { "byte", 2 },
-            { "kbyte", 3 },
-            { "mbyte", 4 },
-            { "gbyte", 5 },
+            { "Бит", 1 },
+            { "Байт", 2 },
+            { "Кбайт", 3 },
+            { "Мбайт", 4 },
+            { "Гбайт", 5 },
         };
         Random random = new Random();
         public Number GenerateNumber(Number inputNumber)
