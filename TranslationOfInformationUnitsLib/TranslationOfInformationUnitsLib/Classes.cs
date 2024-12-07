@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-namespace TranslationOfInfUnits
+﻿namespace TranslationOfInfUnits
 {
     public interface IGenerator
     {
         public (string,string) GenerateAllData();
-        //public string GenerateAnswer(List<Number> exerciseData, string type = "");
     }
     public class GeneratorTranslate : IGenerator
     {
@@ -241,6 +238,33 @@ namespace TranslationOfInfUnits
                     return random.Next(10000000, 100000000);
                 }
                 return 0;
+            }
+        }
+    }
+    public static class CheckAnswer
+    {
+        public static bool Check(string exerciseAnswer, string userAnswer)
+        {
+            if (exerciseAnswer == userAnswer)
+            {
+                return true;
+            }
+            else return false;
+        }
+    }
+    public class SaveResult
+    {
+        public void Save(List<(string,string,string)> testData, string path)
+        {
+            using(StreamWriter sw = new StreamWriter(path))
+            {
+                for (int i  = 0; i < testData.Count; i++)
+                {
+                    sw.WriteLine($"Задание {i + 1}.");
+                    sw.WriteLine(testData[0]);
+                    sw.WriteLine($"Правильный ответ: {testData[1]}");
+                    sw.WriteLine($"Ваш ответ: {testData[1]}\n");
+                }
             }
         }
     }
