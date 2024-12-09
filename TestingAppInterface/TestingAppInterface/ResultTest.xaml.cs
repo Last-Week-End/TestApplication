@@ -23,5 +23,20 @@ namespace TestingAppInterface
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var mainwindow = new MainWindow();
+            var Result = new ResultTest();
+            mainwindow.Show();
+            Result.Close();
+            
+        }
+        public static class WindowStateManeger
+        {
+            public static WindowState WindowState { get; set; } = WindowState.Maximized;
+            public static WindowStyle WindowStyle { get; set; } = WindowStyle.SingleBorderWindow;
+
+        }
     }
 }

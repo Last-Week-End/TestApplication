@@ -5,20 +5,39 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TestingAppInterface"
       mc:Ignorable="d" 
+      WindowState="Maximized"  
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Result">
+      Title="Result" Height="500" Width="800">
+    <Viewbox Stretch="Uniform">
 
+        <Canvas Background="White" Width="800" Height="500">
+            <!-- TextBlock with long text -->
+            <TextBlock TextWrapping="Wrap" Text="1010101010101101010101010101010101010101100101101010000000000111111111111101010101010110010110101010101010101010100101010101010101010101010011010101001011010101001010101101010101001011001011001101010101101010101010011010101010101011010101010011010100101010110011010011010101010101010101010101010101010101010101101010010110101010101010101011010101010101010101010101010101010010101101110100101101010010101010101010101010101010101010101010101010101010101010101010101101010101010101001101001010101010101010111001010101011100101010001011010011001101010110101010101001010110010101010110010101010101010101010101011010011" 
+                   FontFamily="Wide Latin" FontSize="22" Foreground="#FF0032FF" Opacity="0.2"
+                   Canvas.Left="0" Canvas.Top="-3" Canvas.Right="0" Canvas.Bottom="0" Height="513" Width="800"/>
 
-    <Grid Background="White" Width="800" Height="500">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <DataGrid x:Name="AnswerGrid" AutoGenerateColumns="False" Margin="10,10,10,10">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Задание" Binding="{Binding Task}" Width="*"/>
-                <DataGridTextColumn Header="Ваш ответ" Binding="{Binding YourAnswer}" Width="*"/>
-                <DataGridTextColumn Header="Правильный ответ" Binding="{Binding CorrectAnswer}" Width="*"/>
-            </DataGrid.Columns>
-        </DataGrid>
-    </Grid>
+            <!-- DataGrid -->
+            <DataGrid x:Name="AnswerGrid" AutoGenerateColumns="False" 
+                  Canvas.Left="10" Canvas.Top="10" Canvas.Right="40" Canvas.Bottom="281" HorizontalAlignment="Center" Height="271" VerticalAlignment="Top" Width="780">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Задание" Binding="{Binding Task}" Width="*"/>
+                    <DataGridTextColumn Header="Ваш ответ" Binding="{Binding YourAnswer}" Width="*"/>
+                    <DataGridTextColumn Header="Правильный ответ" Binding="{Binding CorrectAnswer}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- Button "Вернутся в главное меню" -->
+            <Button Content="Вернутся в главное меню" Click="Button_Click" VerticalAlignment="Top" 
+                FontFamily="Bahnschrift Light" Foreground="White" 
+                Background="Red" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
+                Height="86" Canvas.Left="34" Canvas.Top="349" Opacity="0.98" FontSize="16">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </Canvas>
+    </Viewbox>
 </Window>

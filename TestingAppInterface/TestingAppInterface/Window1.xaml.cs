@@ -45,5 +45,14 @@ namespace TestingAppInterface
             Close();
         }
 
+        private void FinishTest_Click(object sender, RoutedEventArgs e)
+        {
+            var Test = new Window1();
+            var Result = new ResultTest();
+            //Content = null;
+            //Content = Result.Content;
+            Result.Show();
+            Test.Close();
+        }
     }
 }

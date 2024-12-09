@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\С#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj": {}
+    "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj": {}
   },
   "projects": {
-    "D:\\С#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj": {
+    "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\С#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj",
+        "projectUniqueName": "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj",
         "projectName": "TranslationOfInfUnits",
-        "projectPath": "D:\\С#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj",
-        "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "D:\\С#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\obj\\",
+        "projectPath": "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj",
+        "packagesPath": "C:\\Users\\il1ya\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\il1ya\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

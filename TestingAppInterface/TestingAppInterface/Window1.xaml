@@ -6,47 +6,27 @@
         xmlns:local="clr-namespace:TestingAppInterface"
         mc:Ignorable="d"
         Title="Тестирование" Height="500" Width="800" Uid="win1">
-    
-        <Grid Background="White" Height="8967">
-        
+    <Viewbox Stretch="Uniform">
+        <Canvas Background="White" Height="500" Width="800">
+
         <!-- Заголовок -->
-        <TextBlock TextWrapping="Wrap" Text="1010101010101101010101010101010101010101100101101010000000000111111111111101010101010110010110101010101010101010100101010101010101010101010011010101001011010101001010101101010101001011001011001101010101101010101010011010101010101011010101010011010100101010110011010011010101010101010101010101010101010101010101101010010110101010101010101011010101010101010101010101010101010010101101110100101101010010101010101010101010101010101010101010101010101010101010101010101011010101010101001101001010101010101010111001010101011100101010001011010011001101010110101010101001010110010101010110010101010101010101010101011010011" Margin="0,-3,0,0" Grid.RowSpan="4" FontFamily="Wide Latin" FontSize="22" Foreground="#FF0032FF" Opacity="0.2"/>
-        <TextBlock TextWrapping="Wrap" Text="TextBlock" Margin="91,40,104,178"  Background="White"/>
-            <TextBox TextWrapping="Wrap" Text="TextBox" Margin="91,347,406,116" />
-            <Button Content="Ответить" x:Name="ButtonTraining" Grid.Row="1" VerticalAlignment="Top" 
-                    FontFamily="Bahnschrift Light" FontSize="24" Foreground="White" 
-                    Background="#FFAFAFAF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
-                    Height="44" Margin="0,800,0,0" HorizontalAlignment="Right" Width="146" Click="ButtonTraining_Click" Opacity="0.98">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="25"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Content="Следующее задание" x:Name="Answer"  Grid.Row="1" VerticalAlignment="Top" 
-                    FontFamily="Bahnschrift Light" Opacity="0.82" Foreground="White" 
-                    Background="#FF0032FF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
-                    Height="44" Margin="0,426,0,0" HorizontalAlignment="Center" Width="148">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="25"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Content="Предыдущее задание" x:Name="Next" Grid.Row="1" VerticalAlignment="Top" 
-                    FontFamily="Bahnschrift Light" Opacity="0.82" Foreground="White" 
-                    Background="Gray" BorderThickness="1" RenderTransformOrigin="0.07,0.215" Padding="10"
-                    Height="44" Margin="0,430,631,0" HorizontalAlignment="Right" Width="147" Click="Next_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="25"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Content="Завершить тест" x:Name="Last"  Grid.Row="1" VerticalAlignment="Top" 
-                    FontFamily="Bahnschrift Light" Opacity="0.82" Foreground="White" 
-                    Background="Red" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
-                    Height="44" Margin="0,430,31,0" HorizontalAlignment="Right" Width="147">
+        <TextBlock TextWrapping="Wrap" Text="1010101010101101010101010101010101010101100101101010000000000111111111111101010101010110010110101010101010101010100101010101010101010101010011010101001011010101001010101101010101001011001011001101010101101010101010011010101010101011010101010011010100101010110011010011010101010101010101010101010101010101010101101010010110101010101010101011010101010101010101010101010101010010101101110100101101010010101010101010101010101010101010101010101010101010101010101010101011010101010101001101001010101010101010111001010101011100101010001011010011001101010110101010101001010110010101010110010101010101010101010101011010011" 
+                   FontFamily="Wide Latin" FontSize="22" Foreground="#FF0032FF" Opacity="0.2"
+                   Canvas.Left="0" Canvas.Top="-3" Canvas.Right="0" Canvas.Bottom="0" Height="513" Width="800"/>
+
+        <!-- TextBlock -->
+        <TextBlock TextWrapping="Wrap" Text="TextBlock" Background="White" 
+                   Canvas.Left="76" Canvas.Top="40" Canvas.Right="104" Canvas.Bottom="178" Height="210" Width="648" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <!-- TextBox -->
+        <TextBox TextWrapping="Wrap" Text="TextBox" 
+                 Canvas.Left="76" Canvas.Top="277" Canvas.Right="406" Canvas.Bottom="116" Height="38" Width="324" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <!-- Button "Ответить" -->
+        <Button Content="Ответить" x:Name="AnswerTAsk" VerticalAlignment="Center" 
+                FontFamily="Bahnschrift Light" FontSize="24" Foreground="White" 
+                Background="#FFAFAFAF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
+                Height="44" Canvas.Left="447" Canvas.Top="274" Width="195" Click="ButtonTraining_Click" Opacity="0.98" HorizontalAlignment="Left">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="25"/>
@@ -54,8 +34,43 @@
             </Button.Resources>
         </Button>
 
+        <!-- Button "Следующее задание" -->
+        <Button Content="Следующее задание" x:Name="NextTaskTest" VerticalAlignment="Top" 
+                FontFamily="Bahnschrift Light" Opacity="0.82" Foreground="White" 
+                Background="#FF0032FF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
+                Height="69" Canvas.Left="308" Canvas.Top="405" Width="184" HorizontalAlignment="Center" FontSize="14">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
-    </Grid>
-    
+        <!-- Button "Предыдущее задание" -->
+        <Button Content="Предыдущее задание" x:Name="LastTaskTest" VerticalAlignment="Top" 
+                FontFamily="Bahnschrift Light" Opacity="0.82" Foreground="White" 
+                Background="Gray" BorderThickness="1" RenderTransformOrigin="0.07,0.215" Padding="10"
+                Height="67" Canvas.Left="12" Canvas.Top="407" Width="187" Click="Next_Click" FontSize="14">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Button "Завершить тест" -->
+        <Button Content="Завершить тест" x:Name="FinishTest" VerticalAlignment="Top" 
+                FontFamily="Bahnschrift Light" Opacity="0.82" Foreground="White" 
+                Background="Red" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
+                Height="67" Canvas.Left="596" Canvas.Top="407" Width="172" HorizontalAlignment="Center" FontSize="14" Click="FinishTest_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Canvas>
+    </Viewbox>
 
 </Window>
