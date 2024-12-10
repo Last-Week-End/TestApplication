@@ -17,13 +17,13 @@
             string type = random.GenerateType(exerciseData[0].Type);
             string answer = GenerateAnswer(exerciseData, type);
             string exerciseText = $"Переведите {exerciseData[0].Value} {exerciseData[0].Type} в {type}. " +
-                                  $"Ответ округлите до целых.";
+                                  $"Ответ округлите до целых. Единицы измерения писать не нужно.";
             return (exerciseText,answer);
         }
         public string GenerateAnswer(List<Number> exerciseData, string type)
         {
             RandomNumber random = new RandomNumber();
-            return Translate.TranslateTo(exerciseData[0], type).Value.ToString() + " " + type.ToString();
+            return Translate.TranslateTo(exerciseData[0], type).Value.ToString();
         }
     }
     public class GeneratorComparison : IGenerator
@@ -254,18 +254,32 @@
     }
     public class SaveResult
     {
-        public void Save(List<(string,string,string)> testData, string path)
+        public void Save(List<(string,string,string,bool)> testData, string path)
         {
             using(StreamWriter sw = new StreamWriter(path))
             {
                 for (int i  = 0; i < testData.Count; i++)
                 {
                     sw.WriteLine($"Задание {i + 1}.");
-                    sw.WriteLine(testData[0]);
-                    sw.WriteLine($"Правильный ответ: {testData[1]}");
-                    sw.WriteLine($"Ваш ответ: {testData[1]}\n");
+                    sw.WriteLine(testData[i].Item1);
+                    sw.WriteLine($"Правильный ответ: {testData[i].Item2}");
+                    sw.WriteLine($"Ваш ответ: {testData[i].Item3}\n");
+                    if (testData[i].Item4) { sw.WriteLine("Верно"); }
+                    else { sw.WriteLine("Неверно"); }
                 }
             }
+        }
+    }
+    public class CountCorrectAnswer
+    {
+        public int count;
+        public int Count(List<(string, string, string, bool)> testData)
+        {
+            for (int i = 0; i < testData.Count; i++)
+            {
+                if(testData[i].Item4) count++;
+            }
+            return count;
         }
     }
 }

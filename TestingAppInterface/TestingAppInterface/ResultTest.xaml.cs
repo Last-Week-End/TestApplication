@@ -19,23 +19,33 @@ namespace TestingAppInterface
     /// </summary>
     public partial class ResultTest : Window
     {
-        public ResultTest()
+        Window _currentWindow;
+        public ResultTest(Window currentWindow)
         {
             InitializeComponent();
+            _currentWindow = currentWindow;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var mainwindow = new MainWindow();
-            var Result = new ResultTest();
-            mainwindow.Show();
-            Result.Close();
-            
+            //var mainwindow = new MainWindow();
+            //var Result = new ResultTest();
+            //mainwindow.Show();
+            //Result.Close();
+            var mainWindow = new MainWindow(_currentWindow);
+            //var current = Application.Current.Windows.
+            _currentWindow.Content = null;
+            _currentWindow.Content = mainWindow.Content;
         }
         public static class WindowStateManeger
         {
             public static WindowState WindowState { get; set; } = WindowState.Maximized;
             public static WindowStyle WindowStyle { get; set; } = WindowStyle.SingleBorderWindow;
+
+        }
+
+        private void AnswerGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }

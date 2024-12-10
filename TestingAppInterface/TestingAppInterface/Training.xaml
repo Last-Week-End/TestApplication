@@ -16,22 +16,22 @@
                    Canvas.Left="0" Canvas.Top="-3" Canvas.Right="0" Canvas.Bottom="0" Height="443" Width="800" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
         <!-- TextBlock with background -->
-        <TextBlock TextWrapping="Wrap" Text="TextBlock" Background="White" 
-                   Canvas.Left="76" Canvas.Top="28" Canvas.Right="76" Canvas.Bottom="152" Height="234" Width="665"/>
+        <TextBlock x:Name="ExerciseTextBlock" TextWrapping="Wrap"  Background="White" 
+                   Canvas.Left="76" Canvas.Top="28" Canvas.Right="76" Canvas.Bottom="152" Height="234" Width="665" FontFamily="Bahnschrift Light" FontSize="32"/>
 
         <!-- TextBox -->
-        <TextBox TextWrapping="Wrap" Text="TextBox" 
-                 Canvas.Left="62" Canvas.Top="286" Canvas.Right="48" Height="45" Width="317"/>
+        <TextBox x:Name="YourAnswerTextBox" TextWrapping="Wrap" 
+                 Canvas.Left="62" Canvas.Top="286" Canvas.Right="48" Height="45" Width="317" TextChanged="TextBox_TextChanged" FontSize="22"/>
 
         <!-- TextBlock with background -->
-        <TextBlock TextWrapping="Wrap" Text="TextBlock" Background="White" 
-                   Canvas.Left="62" Canvas.Top="340" Canvas.Right="48" Width="317" Height="45" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock x:Name="CorrectAnswerTextBlock" TextWrapping="Wrap"  Background="White" 
+                   Canvas.Left="62" Canvas.Top="340" Canvas.Right="48" Width="317" Height="45" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22"/>
 
         <!-- Button "Ответить" -->
         <Button Content="Ответить" x:Name="Answer" VerticalAlignment="Top" 
                 FontFamily="Bahnschrift Light" FontSize="24" Foreground="White" 
                 Background="#FFAFAFAF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
-                Height="44" Canvas.Left="431" Canvas.Top="286" Width="146" Opacity="0.98">
+                Height="44" Canvas.Left="431" Canvas.Top="286" Width="146" Opacity="0.98" Click="Answer_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="25"/>
@@ -43,7 +43,7 @@
             <Button Content="Завершить тренировку" x:Name="FinishTheTraining" VerticalAlignment="Top" 
                 FontFamily="Bahnschrift Light" Foreground="White" 
                 Background="Red" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
-                Height="44" Canvas.Left="614" Canvas.Top="341" Width="146" Opacity="0.98" FontSize="11">
+                Height="44" Canvas.Left="614" Canvas.Top="341" Width="146" Opacity="0.98" FontSize="11" Click="FinishTheTraining_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="25"/>
@@ -55,7 +55,7 @@
         <Button Content="Следующее задание" x:Name="NextTask" VerticalAlignment="Top" 
                 FontFamily="Bahnschrift Light" Foreground="White" 
                 Background="#FF0032FF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
-                Height="44" Canvas.Left="431" Canvas.Top="341" Width="146" Opacity="0.98">
+                Height="44" Canvas.Left="431" Canvas.Top="341" Width="146" Opacity="0.98" Click="NextTask_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="25"/>

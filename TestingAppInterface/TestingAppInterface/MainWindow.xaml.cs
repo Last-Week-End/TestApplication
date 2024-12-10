@@ -18,12 +18,18 @@ namespace TestingAppInterface
     /// </summary>
     public partial class MainWindow : Window
     {
+        Window _currentWindow;
+        public MainWindow(Window currentWindow)
+        {
+            InitializeComponent();
+            _currentWindow = currentWindow;
+            this.Closing += MainWindow_Closing;
+        }
         public MainWindow()
         {
             InitializeComponent();
             this.Closing += MainWindow_Closing;
-
-
+            _currentWindow = this;
         }
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -50,14 +56,17 @@ namespace TestingAppInterface
             //window.ShowDialog();
             //NavigationService nav = new NavigationService;
             //nav 
-            var mainmenu = new MainWindow();
-            var window2 = new Training();
-            window2.Show();
-            mainmenu.Close();
-
+            //var mainmenu = new MainWindow();
+            //var window2 = new Training();
+            //window2.Show();
+            //mainmenu.Close();
+            var trainingWindow = new Training(_currentWindow);
+            //var current = Application.Current.Windows.
+            _currentWindow.Content = null;
+            _currentWindow.Content = trainingWindow.Content;
             //Content = null;
             //Content = window2.Content;
-            
+
         }
         private void Close(object sender, RoutedEventArgs e)
         {
@@ -66,9 +75,9 @@ namespace TestingAppInterface
 
         private void ButtonTesting_Click(object sender, RoutedEventArgs e)
         {
-            var window1 = new Window1();
-            Content = null;
-            Content = window1.Content;
+            var testingWindow = new Testing(_currentWindow);
+            _currentWindow.Content = null;
+            _currentWindow.Content = testingWindow.Content;
 
         }
     }

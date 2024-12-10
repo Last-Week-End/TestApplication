@@ -8,5 +8,11 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="TranslationOfInfUnits">
+      <HintPath>..\..\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\bin\Debug\net8.0\TranslationOfInfUnits.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 
 </Project>
