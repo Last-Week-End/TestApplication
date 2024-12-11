@@ -23,18 +23,8 @@
                  Canvas.Left="76" Canvas.Top="277" Canvas.Right="406" Canvas.Bottom="116" Height="38" Width="324" HorizontalAlignment="Left" VerticalAlignment="Center" TextChanged="TextBox_TextChanged" FontSize="22"/>
 
         <!-- Button "Ответить" -->
-        <Button Content="Ответить" x:Name="AnswerTAsk" VerticalAlignment="Center" 
-                FontFamily="Bahnschrift Light" FontSize="24" Foreground="White" 
-                Background="#FFAFAFAF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
-                Height="44" Canvas.Left="447" Canvas.Top="274" Width="195" Opacity="0.98" HorizontalAlignment="Left" Click="AnswerTAsk_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="25"/>
-                </Style>
-            </Button.Resources>
-        </Button>
 
-        <!-- Button "Следующее задание" -->
+            <!-- Button "Следующее задание" -->
         <Button Content="Следующее задание" x:Name="NextTaskTest" VerticalAlignment="Top" 
                 FontFamily="Bahnschrift Light" Opacity="0.82" Foreground="White" 
                 Background="#FF0032FF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
@@ -69,8 +59,9 @@
                 </Style>
             </Button.Resources>
         </Button>
+            <TextBlock x:Name="TaskCounterTextBlock" Height="22" Canvas.Left="740" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="10" Width="50"/>
 
-    </Canvas>
+        </Canvas>
     </Viewbox>
 
 </Window>

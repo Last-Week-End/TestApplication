@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using TranslationOfInfUnits;
 
 namespace TestingAppInterface
 {
@@ -20,20 +12,27 @@ namespace TestingAppInterface
     public partial class ResultTest : Window
     {
         Window _currentWindow;
-        public ResultTest(Window currentWindow)
+        public ResultTest(Window currentWindow, List<TaskResult> results)
         {
             InitializeComponent();
             _currentWindow = currentWindow;
+            foreach (var taskResult in results)
+            {
+                ResultGrid.Items.Add(taskResult);
+                if (taskResult.IsCorrect)
+                {
+                    ResultGrid.RowBackground = Brushes.Green;
+                }
+                else
+                {
+                    ResultGrid.RowBackground = Brushes.Red;
+                }
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //var mainwindow = new MainWindow();
-            //var Result = new ResultTest();
-            //mainwindow.Show();
-            //Result.Close();
             var mainWindow = new MainWindow(_currentWindow);
-            //var current = Application.Current.Windows.
             _currentWindow.Content = null;
             _currentWindow.Content = mainWindow.Content;
         }

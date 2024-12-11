@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using TranslationOfInfUnits;
 
 namespace TestingAppInterface
@@ -23,9 +12,8 @@ namespace TestingAppInterface
     {
         public Window _currentWindow;
         Exercise _exercise;
-        bool flag = false; 
-        public List<(string,string,string,bool)> testData = new List<(string, string, string, bool)> ();
-        int currentTask = 0;
+        public List<TaskResult> testData = new List<TaskResult> ();
+        int currentTask = 1;
 
         public Testing()
         {
@@ -35,81 +23,58 @@ namespace TestingAppInterface
         {
             InitializeComponent();
             LastTaskTest.Visibility = Visibility.Hidden;
-
             _currentWindow = currentWindow;
-            _exercise = new Exercise(new GeneratorTranslate());
-            ExerciseTestTextBlock.Text = _exercise.Data;
+            testData = TasksForTest.Generate();
+            UpdateTask();
         }
-        public void InitTestList()
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                if(i < 10)
-                {
-                    _exercise = new Exercise(new GeneratorTranslate());
-                    testData.Add((_exercise.Data, _exercise.Answer, "", false));
-                }
-                else
-                {
-                    _exercise = new Exercise(new GeneratorComparison());
-                    testData.Add((_exercise.Data, _exercise.Answer, "", false));
-                }
-            }
-        }
-
         private void Next_Click(object sender, RoutedEventArgs e)
         {
             LastTaskTest.Visibility = Visibility.Visible;
+
             if (currentTask == 20) NextTaskTest.Visibility = Visibility.Hidden;
             else NextTaskTest.Visibility = Visibility.Visible;
-            currentTask++;
-            bool IsCorrect = CheckAnswer.Check(_exercise.Answer, YourAnswerTestTextBox.Text);
-            testData.Add((_exercise.Data, _exercise.Answer, YourAnswerTestTextBox.Text, IsCorrect));
-            if (flag)
-            {
-                _exercise = new Exercise(new GeneratorTranslate());
-                ExerciseTestTextBlock.Text = _exercise.Data;
-                flag = false;
-            }
-            else
-            {
-                _exercise = new Exercise(new GeneratorComparison());
-                ExerciseTestTextBlock.Text = _exercise.Data;
-                //CorrectAnswerTextBlock.Text = _exercise.Answer;
-                flag = true;
-            }
-            YourAnswerTestTextBox.Text = "";
-        }
 
+            UpdateTestData();
+            currentTask++;
+
+            UpdateTask();
+
+        }
         private void FinishTest_Click(object sender, RoutedEventArgs e)
         {
-            //var Test = new Testing(_currentWindow);
-            var Result = new ResultTest(_currentWindow);
-            //var current = Application.Current.Windows.
+            testData[currentTask].UserAnswer = YourAnswerTestTextBox.Text;
+            var Result = new ResultTest(_currentWindow,testData);
             _currentWindow.Content = null;
             _currentWindow.Content = Result.Content;
-            //Result.Show();
-            //Test.Close();
         }
-
-       
-
         private void AnswerTAsk_Click(object sender, RoutedEventArgs e)
         {
             bool IsCorrect = CheckAnswer.Check(_exercise.Answer, YourAnswerTestTextBox.Text);
-            testData.Add((_exercise.Data, _exercise.Answer, YourAnswerTestTextBox.Text, IsCorrect));
+            var taskResult = new TaskResult(_exercise.Data, _exercise.Answer, YourAnswerTestTextBox.Text, IsCorrect);
+            testData.Add(taskResult);
         }
-
         private void LastTaskTest_Click(object sender, RoutedEventArgs e)
         {
-            if(currentTask == 0) LastTaskTest.Visibility = Visibility.Hidden;
-            else LastTaskTest.Visibility = Visibility.Visible;
             currentTask--;
-            YourAnswerTestTextBox.Text = testData[currentTask].Item3;
-            ExerciseTestTextBlock.Text = testData[currentTask].Item1;
 
+            if (currentTask == 1) LastTaskTest.Visibility = Visibility.Hidden;
+            else LastTaskTest.Visibility = Visibility.Visible;
+
+            UpdateTask();
         }
+        private void UpdateTask()
+        {
+            TaskCounterTextBlock.Text = $"{currentTask}/20";
+            ExerciseTestTextBlock.Text = testData[currentTask - 1].ExerciseData;
+            YourAnswerTestTextBox.Text = testData[currentTask - 1].UserAnswer;
+        }
+        private void UpdateTestData()
+        {
+            bool IsCorrect = CheckAnswer.Check(testData[currentTask - 1].CorrectAnswer, YourAnswerTestTextBox.Text);
+            var taskResult = new TaskResult(testData[currentTask - 1].ExerciseData, testData[currentTask - 1].CorrectAnswer, YourAnswerTestTextBox.Text, IsCorrect);
 
+            testData[currentTask - 1] = taskResult;
+        }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {  
             if (YourAnswerTestTextBox.Text.Length > 15)

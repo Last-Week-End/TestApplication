@@ -1,63 +1,5 @@
 ﻿namespace TranslationOfInfUnits
 {
-    public interface IGenerator
-    {
-        public (string,string) GenerateAllData();
-    }
-    public class GeneratorTranslate : IGenerator
-    {
-        public (string,string) GenerateAllData()
-        {
-            RandomNumber random = new RandomNumber();
-
-            List<Number> exerciseData = new List<Number>()
-            {
-                random.GenerateNumber(new Number())
-            };
-            string type = random.GenerateType(exerciseData[0].Type);
-            string answer = GenerateAnswer(exerciseData, type);
-            string exerciseText = $"Переведите {exerciseData[0].Value} {exerciseData[0].Type} в {type}. " +
-                                  $"Ответ округлите до целых. Единицы измерения писать не нужно.";
-            return (exerciseText,answer);
-        }
-        public string GenerateAnswer(List<Number> exerciseData, string type)
-        {
-            RandomNumber random = new RandomNumber();
-            return Translate.TranslateTo(exerciseData[0], type).Value.ToString();
-        }
-    }
-    public class GeneratorComparison : IGenerator
-    {
-        public (string,string) GenerateAllData()
-        {
-            RandomNumber random = new RandomNumber();
-            Number firstNumber = random.GenerateNumber(new Number());
-            Number secondNumber = random.GenerateNumber(firstNumber);
-
-            List<Number> exerciseData = new List<Number>()
-            {
-                firstNumber,
-                secondNumber
-            };
-            string answer = GenerateAnswer(exerciseData);
-            string exerciseText = $"Сравните {exerciseData[0].Value} {exerciseData[0].Type} и " +
-                                  $"{exerciseData[1].Value} {exerciseData[1].Type}. " +
-                                  $"В ответе напишите >, < или =. ";
-            return (exerciseText,answer);
-        }
-        public string GenerateAnswer(List<Number> exerciseData)
-        {
-            if (Translate.ToBit(exerciseData[0]) > Translate.ToBit(exerciseData[1]))
-            {
-                return ">";
-            }
-            else if (Translate.ToBit(exerciseData[0]) < Translate.ToBit(exerciseData[1]))
-            {
-                return "<";
-            }
-            else return "=";
-        }
-    }
     public static class Translate
     {
         public static Number TranslateTo(Number number, string type)
@@ -157,6 +99,11 @@
             Data = AllData.Item1;
             Answer = AllData.Item2;
         }
+        public Exercise()
+        {
+            Data = "no content";
+            Answer = "no content";
+        }
     }
     public class RandomNumber
     {
@@ -254,32 +201,71 @@
     }
     public class SaveResult
     {
-        public void Save(List<(string,string,string,bool)> testData, string path)
+        public void Save(List<TaskResult> testData, string path)
         {
             using(StreamWriter sw = new StreamWriter(path))
             {
                 for (int i  = 0; i < testData.Count; i++)
                 {
                     sw.WriteLine($"Задание {i + 1}.");
-                    sw.WriteLine(testData[i].Item1);
-                    sw.WriteLine($"Правильный ответ: {testData[i].Item2}");
-                    sw.WriteLine($"Ваш ответ: {testData[i].Item3}\n");
-                    if (testData[i].Item4) { sw.WriteLine("Верно"); }
+                    sw.WriteLine(testData[i].ExerciseData);
+                    sw.WriteLine($"Правильный ответ: {testData[i].CorrectAnswer}");
+                    sw.WriteLine($"Ваш ответ: {testData[i].UserAnswer}\n");
+                    if (testData[i].IsCorrect) { sw.WriteLine("Верно"); }
                     else { sw.WriteLine("Неверно"); }
                 }
             }
         }
     }
+    public class TaskResult
+    {
+        public string ExerciseData { get; private set; }
+        public string CorrectAnswer { get; private set; }
+        public string UserAnswer { get; set; }
+        public bool IsCorrect { get; private set; }
+        public TaskResult(string exerciseData, string correctAnswer, string userAnswer, bool isCorrect)
+        {
+            ExerciseData = exerciseData;
+            CorrectAnswer = correctAnswer;
+            UserAnswer = userAnswer;
+            IsCorrect = isCorrect;
+        }
+    }
     public class CountCorrectAnswer
     {
         public int count;
-        public int Count(List<(string, string, string, bool)> testData)
+        public int Count(List<TaskResult> testData)
         {
             for (int i = 0; i < testData.Count; i++)
             {
-                if(testData[i].Item4) count++;
+                if(testData[i].IsCorrect) count++;
             }
             return count;
         }
+    }
+    public static class TasksForTest
+    {
+        public static List<TaskResult> Generate()
+        {
+            var _exercise = new Exercise();
+            var testData = new List<TaskResult>();
+            for (int i = 0; i < 20; i++)
+            {
+                if (i < 10)
+                {
+                    _exercise = new Exercise(new GeneratorTranslate());
+                    var taskResult = new TaskResult(_exercise.Data, _exercise.Answer, "", false);
+                    testData.Add(taskResult);
+                }
+                else
+                {
+                    _exercise = new Exercise(new GeneratorComparison());
+                    var taskResult = new TaskResult(_exercise.Data, _exercise.Answer, "", false);
+                    testData.Add(taskResult);
+                }
+            }
+            return testData;
+        }
+        
     }
 }

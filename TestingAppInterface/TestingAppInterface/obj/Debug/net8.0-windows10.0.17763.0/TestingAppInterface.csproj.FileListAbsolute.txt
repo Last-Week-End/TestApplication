@@ -61,3 +61,6 @@ D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debu
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\TranslationOfInfUnits.dll
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\TranslationOfInfUnits.pdb
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\TestingAppInterface.csproj.AssemblyReference.cache
+D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\TranslationOfInfUnits.dll
+D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\TranslationOfInfUnits.pdb
+D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\TestingAppInterface.csproj.AssemblyReference.cache

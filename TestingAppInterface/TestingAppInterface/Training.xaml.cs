@@ -13,8 +13,6 @@ namespace TestingAppInterface
         public Window _currentWindow;
         Exercise _exercise;
 
-        //GeneratorComparison generatorComparison = new GeneratorComparison();
-        //GeneratorTranslate generatorTranslate = new GeneratorTranslate();
         bool flag = false;
         public Training()
         {
@@ -51,7 +49,6 @@ namespace TestingAppInterface
             {
                 _exercise = new Exercise(new GeneratorComparison());
                 ExerciseTextBlock.Text = _exercise.Data;
-                //CorrectAnswerTextBlock.Text = _exercise.Answer;
                 flag = true;
             }
         }
