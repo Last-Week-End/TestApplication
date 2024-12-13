@@ -42,11 +42,6 @@ namespace TestingAppInterface
 
         }
 
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
         private void ButtonTraining_Click(object sender, RoutedEventArgs e)
         {
             var trainingWindow = new Training(_currentWindow);
@@ -63,7 +58,11 @@ namespace TestingAppInterface
             var testingWindow = new Testing(_currentWindow);
             _currentWindow.Content = null;
             _currentWindow.Content = testingWindow.Content;
-
+        }
+        private void ChangeWindow(Window newWindow)
+        {
+            _currentWindow.Content = null;
+            _currentWindow.Content = newWindow.Content;
         }
     }
 }

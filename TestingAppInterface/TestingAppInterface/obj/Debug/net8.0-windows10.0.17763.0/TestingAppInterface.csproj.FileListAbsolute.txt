@@ -64,3 +64,17 @@ D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\TranslationOfInfUnits.dll
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\TranslationOfInfUnits.pdb
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\TestingAppInterface.csproj.AssemblyReference.cache
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\Microsoft.Extensions.Logging.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\Microsoft.Extensions.Options.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\Microsoft.Extensions.Primitives.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\PdfSharp.Charting.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\PdfSharp.Quality.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\PdfSharp.Snippets.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\PdfSharp.System.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\PdfSharp.WPFonts.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\PdfSharp.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\de\PdfSharp.Charting.resources.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\de\PdfSharp.resources.dll

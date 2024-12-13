@@ -1,4 +1,9 @@
-﻿namespace TranslationOfInfUnits
+﻿using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using PdfSharp.UniversalAccessibility.Drawing;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace TranslationOfInfUnits
 {
     public static class Translate
     {
@@ -203,18 +208,40 @@
     {
         public void Save(List<TaskResult> testData, string path)
         {
-            using(StreamWriter sw = new StreamWriter(path))
+            PdfDocument document = new PdfDocument();
+            PdfPage page = document.AddPage();
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+            XFont font = new XFont("Arial", 11);
+
+            // Начальные координаты для текста
+            double x = 50; // Позиция по горизонтали
+            double y = 50; // Позиция по вертикали
+
+            // Разбиваем текст на строки, чтобы уместить его на странице
+            //string[] lines = text.Split(new[] { '\n' }, StringSplitOptions.None);
+
+            for (int i =0;i<testData.Count;i++)
             {
-                for (int i  = 0; i < testData.Count; i++)
+                gfx.DrawString($"Задание {i+1}", font, XBrushes.Black, x, y);
+                y += 20; // Переходим на следующую строку
+                gfx.DrawString(testData[i].ExerciseData, font, XBrushes.Black, x, y);
+                y += 20; // Переходим на следующую строку
+                gfx.DrawString("Ваш ответ: "+testData[i].UserAnswer, font, XBrushes.Black, x, y);
+                y += 20; // Переходим на следующую строку
+                gfx.DrawString("Правильный ответ: " + testData[i].CorrectAnswer, font, XBrushes.Black, x, y);
+                y += 20; // Переходим на следующую строку
+
+                // Если текст выходит за пределы страницы, добавляем новую страницу
+                if (y + 20 > page.Height)
                 {
-                    sw.WriteLine($"Задание {i + 1}.");
-                    sw.WriteLine(testData[i].ExerciseData);
-                    sw.WriteLine($"Правильный ответ: {testData[i].CorrectAnswer}");
-                    sw.WriteLine($"Ваш ответ: {testData[i].UserAnswer}\n");
-                    if (testData[i].IsCorrect) { sw.WriteLine("Верно"); }
-                    else { sw.WriteLine("Неверно"); }
+                    page = document.AddPage();
+                    gfx = XGraphics.FromPdfPage(page);
+                    y = 50; // Сбрасываем позицию по вертикали
                 }
             }
+
+            // Сохраняем PDF-документ
+            document.Save(path);
         }
     }
     public class TaskResult

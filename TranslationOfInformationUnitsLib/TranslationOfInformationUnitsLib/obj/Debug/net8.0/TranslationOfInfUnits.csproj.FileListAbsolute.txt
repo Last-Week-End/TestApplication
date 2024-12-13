@@ -22,3 +22,4 @@ D:\Project\TestApplication\TranslationOfInformationUnitsLib\TranslationOfInforma
 D:\Project\TestApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\refint\TranslationOfInfUnits.dll
 D:\Project\TestApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\TranslationOfInfUnits.pdb
 D:\Project\TestApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\ref\TranslationOfInfUnits.dll
+D:\Project\TestApplication\TranslationOfInformationUnitsLib\TranslationOfInformationUnitsLib\obj\Debug\net8.0\TranslationOfInfUnits.csproj.AssemblyReference.cache

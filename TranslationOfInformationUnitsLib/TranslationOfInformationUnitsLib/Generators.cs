@@ -23,7 +23,8 @@ namespace TranslationOfInfUnits
             string type = random.GenerateType(exerciseData[0].Type);
             string answer = GenerateAnswer(exerciseData, type);
             string exerciseText = $"Переведите {exerciseData[0].Value} {exerciseData[0].Type} в {type}. " +
-                                  $"Ответ округлите до целых. Единицы измерения писать не нужно.";
+                                  $"" +
+                                  $"В ответ напишите только целую часть.";
             return (exerciseText, answer);
         }
         public string GenerateAnswer(List<Number> exerciseData, string type)

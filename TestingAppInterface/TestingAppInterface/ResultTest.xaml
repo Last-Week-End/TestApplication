@@ -21,6 +21,18 @@
                   Canvas.Left="10" Canvas.Top="10" Canvas.Right="40" Canvas.Bottom="281" 
                     HorizontalAlignment="Center" Height="271" VerticalAlignment="Top" 
                     Width="780" SelectionChanged="AnswerGrid_SelectionChanged">
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsCorrect}" Value="True">
+                                <Setter Property="Background" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding IsCorrect}" Value="False">
+                                <Setter Property="Background" Value="Red"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
                 <DataGrid.Columns>
                     <DataGridTextColumn x:Name="TaskData" Header="Задание" Binding="{Binding ExerciseData}" Width="*" >
                         <DataGridTextColumn.ElementStyle>

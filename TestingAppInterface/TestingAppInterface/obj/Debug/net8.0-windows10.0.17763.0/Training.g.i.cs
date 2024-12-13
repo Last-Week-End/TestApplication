@@ -101,7 +101,7 @@ namespace TestingAppInterface {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TestingAppInterface;component/training.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TestingAppInterface;V1.0.0.0;component/training.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Training.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

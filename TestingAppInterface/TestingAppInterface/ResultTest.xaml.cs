@@ -1,8 +1,12 @@
-﻿using System.Drawing;
+﻿using Microsoft.Win32;
+using System.Drawing;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using TranslationOfInfUnits;
+using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using System.IO;
 
 namespace TestingAppInterface
 {
@@ -12,29 +16,41 @@ namespace TestingAppInterface
     public partial class ResultTest : Window
     {
         Window _currentWindow;
+        List<TaskResult> _results = new List<TaskResult>();
         public ResultTest(Window currentWindow, List<TaskResult> results)
         {
             InitializeComponent();
             _currentWindow = currentWindow;
-            foreach (var taskResult in results)
+            _results = results;
+            foreach (var taskResult in _results)
             {
                 ResultGrid.Items.Add(taskResult);
-                if (taskResult.IsCorrect)
-                {
-                    ResultGrid.RowBackground = Brushes.Green;
-                }
-                else
-                {
-                    ResultGrid.RowBackground = Brushes.Red;
-                }
             }
         }
 
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var saveresult = MessageBox.Show("Хотите сохранить данные из таблицы перед выходом?", "Сохранение данных", MessageBoxButton.YesNo, MessageBoxImage.Question);
             var mainWindow = new MainWindow(_currentWindow);
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                // Сохранение данных в выбранный файл
+                MessageBox.Show("Данные успешно сохранены.", "Сохранение завершено", MessageBoxButton.OK, MessageBoxImage.Information);
+                var save = new SaveResult();
+                save.Save(_results, saveFileDialog.FileName + ".pdf");
+                //File.SetAttributes(saveFileDialog.FileName, FileAttributes.ReadOnly);
+            }
+            else
+            {
+                MessageBox.Show("Сохранение отменено.", "Сохранение отменено", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
             _currentWindow.Content = null;
             _currentWindow.Content = mainWindow.Content;
+            //var saveresult = MessageBox.Show("Хотите сохранить данные из таблицы перед выходом?", "Сохранение данных", MessageBoxButton.YesNo, MessageBoxImage.Question);
         }
         public static class WindowStateManeger
         {

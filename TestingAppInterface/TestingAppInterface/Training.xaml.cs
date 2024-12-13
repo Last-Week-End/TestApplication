@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Text.RegularExpressions;
+using System.Windows;
 using System.Windows.Media;
 using TranslationOfInfUnits;
 using Windows.UI;
@@ -66,6 +67,7 @@ namespace TestingAppInterface
                 YourAnswerTextBox.Background = Brushes.Red;
             }
         }
+
               
 
         private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
@@ -75,15 +77,8 @@ namespace TestingAppInterface
             {
                 YourAnswerTextBox.Text = YourAnswerTextBox.Text.Substring(0, 15);
             }
-            try
-            {
-                long.Parse(YourAnswerTextBox.Text);
-            }
-            catch
-            {
-                //YourAnswerTextBox.Text = YourAnswerTextBox.Text.Substring(0, YourAnswerTextBox.Text.Length - 2);
-                //YourAnswerTextBox.Text = "";
-            }
+            Regex regex = new Regex(@"^\d+$");
+            YourAnswerTextBox.Text = regex.Replace(YourAnswerTextBox.Text, "[0,9]+$");
         }
     }
 }
