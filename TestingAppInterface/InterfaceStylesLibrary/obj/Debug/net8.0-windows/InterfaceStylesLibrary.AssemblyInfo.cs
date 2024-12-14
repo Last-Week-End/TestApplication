@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InterfaceStylesLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1febbb0236aefdfff27b9736c0d03e953653c2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29b51d1d0bd53ba7f1e1fd2121231e03baf669fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("InterfaceStylesLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InterfaceStylesLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

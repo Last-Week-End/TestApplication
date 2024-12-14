@@ -33,19 +33,22 @@ namespace TestingAppInterface
         {
             var saveresult = MessageBox.Show("Хотите сохранить данные из таблицы перед выходом?", "Сохранение данных", MessageBoxButton.YesNo, MessageBoxImage.Question);
             var mainWindow = new MainWindow(_currentWindow);
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (saveresult == MessageBoxResult.Yes)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-            if (saveFileDialog.ShowDialog() == true)
-            {
-                // Сохранение данных в выбранный файл
-                MessageBox.Show("Данные успешно сохранены.", "Сохранение завершено", MessageBoxButton.OK, MessageBoxImage.Information);
-                var save = new SaveResult();
-                save.Save(_results, saveFileDialog.FileName + ".pdf");
-                //File.SetAttributes(saveFileDialog.FileName, FileAttributes.ReadOnly);
-            }
-            else
-            {
-                MessageBox.Show("Сохранение отменено.", "Сохранение отменено", MessageBoxButton.OK, MessageBoxImage.Warning);
+                if (saveFileDialog.ShowDialog() == true)
+                {
+                    // Сохранение данных в выбранный файл
+                    MessageBox.Show("Данные успешно сохранены.", "Сохранение завершено", MessageBoxButton.OK, MessageBoxImage.Information);
+                    var save = new SaveResult();
+                    save.Save(_results, saveFileDialog.FileName + ".pdf");
+                    //File.SetAttributes(saveFileDialog.FileName, FileAttributes.ReadOnly);
+                }
+                else
+                {
+                    MessageBox.Show("Сохранение отменено.", "Сохранение отменено", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
             }
 
             _currentWindow.Content = null;

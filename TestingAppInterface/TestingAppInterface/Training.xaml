@@ -10,58 +10,59 @@
     <Viewbox Stretch="Uniform">
 
         <Canvas Width="800" Height="450">
-        <!-- TextBlock with long text -->
-        <TextBlock TextWrapping="Wrap" Text="1010101010101101010101010101010101011010101010100110101010101010110101010100110101001010101100110100110101010101010101010101010101010101010101011010100101101010101010101010110101010101010101010101010101010100101011011101001011010100101010101010101010101010101010101010101010101010101010101010101010110101010101010011010010101010101010101110010101010111001010100010110100110011010101101010101010010101100101010101100101010101010101010101010110100110101001010101010101010101001010101010101010101010101010101010101010010101010101101010010101010101010" 
+            <!-- TextBlock with long text -->
+            <!--<TextBlock TextWrapping="Wrap" Text="1010101010101101010101010101010101011010101010100110101010101010110101010100110101001010101100110100110101010101010101010101010101010101010101011010100101101010101010101010110101010101010101010101010101010100101011011101001011010100101010101010101010101010101010101010101010101010101010101010101010110101010101010011010010101010101010101110010101010111001010100010110100110011010101101010101010010101100101010101100101010101010101010101010110100110101001010101010101010101001010101010101010101010101010101010101010010101010101101010010101010101010" 
                    FontFamily="Wide Latin" FontSize="22" Foreground="#FF0032FF" Opacity="0.2"
-                   Canvas.Left="0" Canvas.Top="-3" Canvas.Right="0" Canvas.Bottom="0" Height="443" Width="800" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                   Canvas.Left="0" Canvas.Top="-3" Canvas.Right="0" Canvas.Bottom="0" Height="443" Width="800" HorizontalAlignment="Left" VerticalAlignment="Top"/>-->
+            <Image Source="/3.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="500" Width="1000" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Grid.ColumnSpan="2" Canvas.Left="-27" Canvas.Top="-25"/>
 
-        <!-- TextBlock with background -->
-        <TextBlock x:Name="ExerciseTextBlock" TextWrapping="Wrap"  Background="White" 
+            <!-- TextBlock with background -->
+            <TextBlock x:Name="ExerciseTextBlock" TextWrapping="Wrap"  Background="White" 
                    Canvas.Left="76" Canvas.Top="28" Canvas.Right="76" Canvas.Bottom="152" Height="234" Width="665" FontFamily="Bahnschrift Light" FontSize="32"/>
 
-        <!-- TextBox -->
-        <TextBox x:Name="YourAnswerTextBox" TextWrapping="Wrap" 
+            <!-- TextBox -->
+            <TextBox x:Name="YourAnswerTextBox" TextWrapping="Wrap" 
                  Canvas.Left="62" Canvas.Top="286" Canvas.Right="48" Height="45" Width="317" TextChanged="TextBox_TextChanged" FontSize="22"/>
 
-        <!-- TextBlock with background -->
-        <TextBlock x:Name="CorrectAnswerTextBlock" TextWrapping="Wrap"  Background="White" 
+            <!-- TextBlock with background -->
+            <TextBlock x:Name="CorrectAnswerTextBlock" TextWrapping="Wrap"  Background="White" 
                    Canvas.Left="62" Canvas.Top="340" Canvas.Right="48" Width="317" Height="45" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22"/>
 
-        <!-- Button "Ответить" -->
-        <Button Content="Ответить" x:Name="Answer" VerticalAlignment="Top" 
+            <!-- Button "Ответить" -->
+            <Button Content="Ответить" x:Name="Answer" VerticalAlignment="Top" 
                 FontFamily="Bahnschrift Light" FontSize="24" Foreground="White" 
                 Background="#FFAFAFAF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
                 Height="44" Canvas.Left="431" Canvas.Top="286" Width="146" Opacity="0.98" Click="Answer_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="25"/>
-                </Style>
-            </Button.Resources>
-        </Button>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
 
-        <!-- Button "Завершить тренировку" -->
+            <!-- Button "Завершить тренировку" -->
             <Button Content="Завершить тренировку" x:Name="FinishTheTraining" VerticalAlignment="Top" 
                 FontFamily="Bahnschrift Light" Foreground="White" 
                 Background="Red" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
                 Height="44" Canvas.Left="614" Canvas.Top="341" Width="146" Opacity="0.98" FontSize="11" Click="FinishTheTraining_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="25"/>
-                </Style>
-            </Button.Resources>
-        </Button>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
 
-        <!-- Button "Следующее задание" -->
-        <Button Content="Следующее задание" x:Name="NextTask" VerticalAlignment="Top" 
+            <!-- Button "Следующее задание" -->
+            <Button Content="Следующее задание" x:Name="NextTask" VerticalAlignment="Top" 
                 FontFamily="Bahnschrift Light" Foreground="White" 
                 Background="#FF0032FF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
                 Height="44" Canvas.Left="431" Canvas.Top="341" Width="146" Opacity="0.98" Click="NextTask_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="25"/>
-                </Style>
-            </Button.Resources>
-        </Button>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Canvas>
     </Viewbox>
 

@@ -78,3 +78,6 @@ D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\PdfSharp.dll
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\de\PdfSharp.Charting.resources.dll
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\de\PdfSharp.resources.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\InterfaceStylesLibrary.dll
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\InterfaceStylesLibrary.pdb
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\StyleResources.baml

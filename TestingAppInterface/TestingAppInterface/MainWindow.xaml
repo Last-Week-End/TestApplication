@@ -6,50 +6,51 @@
         xmlns:local="clr-namespace:TestingAppInterface"
         mc:Ignorable="d"
         WindowState="Maximized"
-        Title="MainWindow" Height="500" Width="800">
+
+        Title="MainWindow" Height="500" Width="800" WindowStyle="ThreeDBorderWindow">
+
+    <!-- Подключение библиотеки стилей -->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Подключение библиотеки стилей -->
+                <ResourceDictionary Source="/StyleResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
 
     <Viewbox Stretch="Uniform">
         <Grid Background="White" Width="800" Height="500">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="193*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="171*"/>
+                <RowDefinition Height="79*"/>
+            </Grid.RowDefinitions>
 
 
             <!-- Заголовок -->
 
+            <Image Source="/3.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="500" Width="1000" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 
-            <TextBlock TextWrapping="Wrap" FontSize="20" Foreground="#FF0032FF" FontFamily="Wide Latin" Opacity="0.25" HorizontalAlignment="Left" Width="824" Margin="-12,0,0,0"><Run Text="100010101010101001010101010110101010110100110100110101100101011010101010"/><Run Text="10101000101011000101101011010100100101010101001011010101010101010101010101010101010101011010101010101000101111101001010110101010101010101010101010100010101010101011101001010101100101101010100110010101011010101010100101010101010101010101010010110100101010101100101001111001001010101100101010101010101010101011001010110101000101010101010101011010101010100010111010101010101011010011101010101101010101010011010101001101010010101010101010101010101101011010101010101010101001010110101010101010101010101010001111010101010101010101010101010101010101010101010101010101010100101101010010101011010101001101010010110010101010101010100101010101001011010110101010100101010101011011010100101010101011010"/><LineBreak/><Run/><Run Text="                        "/></TextBlock>
+            <!-- Заголовок -->
+
+
 
             <!-- Кнопка "Начать Тренировку" -->
-            <Button x:Name="ButtonTraining" Content="Начать Тренировку" Click="ButtonTraining_Click" Grid.Row="1" Grid.Column="3" VerticalAlignment="Top" 
-                    FontFamily="Bahnschrift Light" FontSize="24" Opacity="0.82" Foreground="White" 
-                    Background="#FF0032FF" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
-                    Height="104" Margin="0,329,0,0" HorizontalAlignment="Right" Width="315">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="25"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+            <Button x:Name="ButtonTraining" Content="Начать Тренировку" Click="ButtonTraining_Click" 
+                    Style="{StaticResource TrainingButtonStyle}" Margin="0,186,0,0" Grid.Column="1"/>
 
             <!-- Кнопка "Начать Тестирование" -->
-            <Button x:Name="ButtonTesting" Content="Начать Тестирование" Grid.Row="1" 
-                    HorizontalAlignment="Right" VerticalAlignment="Top" 
-                    FontFamily="Bahnschrift Light" FontSize="24" Opacity="0.82" Foreground="Black" 
-                    Background="#FFD9D9D9" BorderThickness="1" RenderTransformOrigin="0.5,0.5" 
-                    Margin="0,145,-12,0" Padding="10" Height="105" Width="315" Grid.Column="3" Click="ButtonTesting_Click" >
+            <Button x:Name="ButtonTesting" Content="Начать Тестирование" Click="ButtonTesting_Click" 
+                    Style="{StaticResource TestingButtonStyle}" Margin="0,337,0,0" Grid.RowSpan="2" Grid.Column="1"/>
 
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="25"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-            <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top" 
+            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" 
                        TextWrapping="Wrap" FontFamily="Bahnschrift Light Condensed" FontSize="48" 
                        Text="Перевод единиц информации" FontWeight="Bold" TextAlignment="Center" 
-                       RenderTransformOrigin="0.5,0.5" Margin="0,10,84,0" Height="84" Width="597" Grid.Column="2" Grid.RowSpan="2" Foreground="#FF020101" Background="White"
-                       
-        
-                />
-            <!-- Заголовок -->
+                       RenderTransformOrigin="0.5,0.5" Margin="0,10,84,0" Height="84" Width="597" Foreground="#FF020101" Background="White" Grid.Column="1"/>
         </Grid>
     </Viewbox>
 </Window>

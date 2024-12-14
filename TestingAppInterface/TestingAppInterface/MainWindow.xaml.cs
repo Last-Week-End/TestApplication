@@ -38,7 +38,7 @@ namespace TestingAppInterface
         public static class WindowStateManeger
         {
             public static WindowState WindowState { get; set; } = WindowState.Maximized;
-            public static WindowStyle WindowStyle { get; set; }= WindowStyle.SingleBorderWindow;
+            public static WindowStyle WindowStyle { get; set; }= WindowStyle.None;
 
         }
 

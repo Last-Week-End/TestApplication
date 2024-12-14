@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\App.xaml
-4-933067785
+5-222392705
 
 101850329345
-213-920927101
-MainWindow.xaml;ResultTest.xaml;Training.xaml;Window1.xaml;
+214-60334338
+MainWindow.xaml;ResultTest.xaml;StyleResources.xaml;Training.xaml;Window1.xaml;
 
-False
+True
 
