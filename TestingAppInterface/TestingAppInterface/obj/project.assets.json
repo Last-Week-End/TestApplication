@@ -198,19 +198,6 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
-      },
-      "InterfaceStylesLibrary/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/InterfaceStylesLibrary.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/InterfaceStylesLibrary.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WPF"
-        ]
       }
     }
   },
@@ -484,37 +471,31 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "InterfaceStylesLibrary/1.0.0": {
-      "type": "project",
-      "path": "../InterfaceStylesLibrary/InterfaceStylesLibrary.csproj",
-      "msbuildProject": "../InterfaceStylesLibrary/InterfaceStylesLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows10.0.17763": [
-      "InterfaceStylesLibrary >= 1.0.0",
       "PDFsharp >= 6.1.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\il1ya\\.nuget\\packages\\": {},
+    "C:\\Users\\user1\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\TestingAppInterface.csproj",
+      "projectUniqueName": "D:\\С#_study\\TestingApplication\\TestingAppInterface\\TestingAppInterface\\TestingAppInterface.csproj",
       "projectName": "TestingAppInterface",
-      "projectPath": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\TestingAppInterface.csproj",
-      "packagesPath": "C:\\Users\\il1ya\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\TestApplication\\TestingAppInterface\\TestingAppInterface\\obj\\",
+      "projectPath": "D:\\С#_study\\TestingApplication\\TestingAppInterface\\TestingAppInterface\\TestingAppInterface.csproj",
+      "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
+      "outputPath": "D:\\С#_study\\TestingApplication\\TestingAppInterface\\TestingAppInterface\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\il1ya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -523,16 +504,13 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows10.0.17763": {
           "targetAlias": "net8.0-windows10.0.17763.0",
-          "projectReferences": {
-            "D:\\Project\\TestApplication\\TestingAppInterface\\InterfaceStylesLibrary\\InterfaceStylesLibrary.csproj": {
-              "projectPath": "D:\\Project\\TestApplication\\TestingAppInterface\\InterfaceStylesLibrary\\InterfaceStylesLibrary.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

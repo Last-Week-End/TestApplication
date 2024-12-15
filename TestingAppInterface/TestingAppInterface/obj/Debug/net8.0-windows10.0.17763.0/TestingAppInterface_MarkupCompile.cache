@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\
+D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\
 TestingAppInterface
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\App.xaml
+D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\App.xaml
 5-222392705
 
 81006029042
-214-60334338
+213-1034837907
 MainWindow.xaml;ResultTest.xaml;StyleResources.xaml;Training.xaml;Window1.xaml;
 
 False
