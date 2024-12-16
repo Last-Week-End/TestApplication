@@ -38,14 +38,12 @@ D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\bin\Debu
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\MainWindow.g.cs
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\ResultTest.g.cs
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\Training.g.cs
-D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\Window1.g.cs
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\App.g.cs
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\TestingAppInterface_MarkupCompile.cache
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\TestingAppInterface_MarkupCompile.lref
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\MainWindow.baml
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\ResultTest.baml
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\Training.baml
-D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\Window1.baml
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\TestingAppInterface.g.resources
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\TestingAppInterface.GeneratedMSBuildEditorConfig.editorconfig
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\TestingAppInterface.AssemblyInfoInputs.cache
@@ -97,3 +95,5 @@ D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\bin\Debu
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\bin\Debug\net8.0-windows10.0.17763.0\de\PdfSharp.resources.dll
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\StyleResources.baml
 D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\App.baml
+D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\Testing.g.cs
+D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\Testing.baml

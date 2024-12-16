@@ -2,7 +2,6 @@
 using System.Windows;
 using System.Windows.Media;
 using TranslationOfInfUnits;
-using Windows.UI;
 
 namespace TestingAppInterface
 {
@@ -72,13 +71,7 @@ namespace TestingAppInterface
 
         private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
-            
-            if(YourAnswerTextBox.Text.Length > 15)
-            {
-                YourAnswerTextBox.Text = YourAnswerTextBox.Text.Substring(0, 15);
-            }
-            Regex regex = new Regex(@"^\d+$");
-            YourAnswerTextBox.Text = regex.Replace(YourAnswerTextBox.Text, "[0,9]+$");
+            InputProcessing.CorrectInput(sender);
         }
     }
 }

@@ -13,7 +13,7 @@
     <Compile Update="Training.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Window1.xaml.cs">
+    <Compile Update="Testing.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -30,7 +30,7 @@
     <Page Update="Training.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Window1.xaml">
+    <Page Update="Testing.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
