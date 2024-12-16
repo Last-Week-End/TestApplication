@@ -60,7 +60,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <TextBlock x:Name="TaskCounterTextBlock" Height="39" Canvas.Left="740" TextWrapping="Wrap" Text="1/20" Canvas.Top="10" Width="70" Foreground="#FF0032FF" FontFamily="Bahnschrift Light" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBlock x:Name="TaskCounterTextBlock" Height="39" Canvas.Left="729" TextWrapping="Wrap" Text="1/20" Canvas.Top="13" Width="70" Foreground="#FF0032FF" FontFamily="Bahnschrift Light" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.542,0.462"/>
 
         </Canvas>
     </Viewbox>

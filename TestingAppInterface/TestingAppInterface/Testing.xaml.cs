@@ -29,12 +29,12 @@ namespace TestingAppInterface
         private void Next_Click(object sender, RoutedEventArgs e)
         {
             LastTaskTest.Visibility = Visibility.Visible;
-
+            _currentTask++;
             if (_currentTask == 20) NextTaskTest.Visibility = Visibility.Hidden;
             else NextTaskTest.Visibility = Visibility.Visible;
 
             Update_testData();
-            _currentTask++;
+            //_currentTask++;
             UpdateTask();
         }
         private void FinishTest_Click(object sender, RoutedEventArgs e)
@@ -48,6 +48,7 @@ namespace TestingAppInterface
         {
             Update_testData();
             _currentTask--;
+            NextTaskTest.Visibility = Visibility.Visible;
 
             if (_currentTask == 1) LastTaskTest.Visibility = Visibility.Hidden;
             else LastTaskTest.Visibility = Visibility.Visible;
@@ -60,9 +61,11 @@ namespace TestingAppInterface
         }
         private void UpdateTask()
         {
-            TaskCounterTextBlock.Text = $"{_currentTask}/20";
-            ExerciseTestTextBlock.Text = _testData[_currentTask - 1].ExerciseData;
-            YourAnswerTestTextBox.Text = _testData[_currentTask - 1].UserAnswer;
+            
+                TaskCounterTextBlock.Text = $"{_currentTask}/20";
+                ExerciseTestTextBlock.Text = _testData[_currentTask - 1].ExerciseData;
+                YourAnswerTestTextBox.Text = _testData[_currentTask - 1].UserAnswer;
+            
         }
         private void Update_testData()
         {
