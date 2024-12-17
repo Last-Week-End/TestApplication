@@ -29,17 +29,16 @@ namespace TestingAppInterface
         private void Next_Click(object sender, RoutedEventArgs e)
         {
             LastTaskTest.Visibility = Visibility.Visible;
-            _currentTask++;
-            if (_currentTask == 20) NextTaskTest.Visibility = Visibility.Hidden;
+            if (_currentTask == 19) NextTaskTest.Visibility = Visibility.Hidden;
             else NextTaskTest.Visibility = Visibility.Visible;
 
             Update_testData();
-            //_currentTask++;
+            _currentTask++;
             UpdateTask();
         }
         private void FinishTest_Click(object sender, RoutedEventArgs e)
         {
-            _testData[_currentTask -1].UserAnswer = YourAnswerTestTextBox.Text;
+            Update_testData();
             var Result = new ResultTest(_currentWindow,_testData);
             _currentWindow.Content = null;
             _currentWindow.Content = Result.Content;

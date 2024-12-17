@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\\u0421#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\",
+  "WorkspaceRootPath": "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|d:\\\u0441#_study\\testingapplication\\translationofinformationunitslib\\translationofinformationunitslib\\generators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|solutionrelative:translationofinformationunitslib\\generators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|d:\\\u0441#_study\\testingapplication\\translationofinformationunitslib\\translationofinformationunitslib\\baseclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|solutionrelative:translationofinformationunitslib\\baseclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|d:\\\u0441#_study\\testingapplication\\translationofinformationunitslib\\translationofinformationunitslib\\workwithresults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|d:\\project\\testapplication\\translationofinformationunitslib\\translationofinformationunitslib\\workwithresults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|solutionrelative:translationofinformationunitslib\\workwithresults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|d:\\\u0441#_study\\testingapplication\\translationofinformationunitslib\\translationofinformationunitslib\\workwithtasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|d:\\project\\testapplication\\translationofinformationunitslib\\translationofinformationunitslib\\generators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|solutionrelative:translationofinformationunitslib\\generators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|d:\\project\\testapplication\\translationofinformationunitslib\\translationofinformationunitslib\\baseclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|solutionrelative:translationofinformationunitslib\\baseclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|d:\\project\\testapplication\\translationofinformationunitslib\\translationofinformationunitslib\\workwithtasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6A324FA-03AE-4145-9B4E-F29D8E810A89}|TranslationOfInformationUnitsLib\\TranslationOfInfUnits.csproj|solutionrelative:translationofinformationunitslib\\workwithtasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,15 +26,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Generators.cs",
-              "DocumentMoniker": "D:\\\u0421#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\Generators.cs",
+              "DocumentMoniker": "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\Generators.cs",
               "RelativeDocumentMoniker": "TranslationOfInformationUnitsLib\\Generators.cs",
-              "ToolTip": "D:\\\u0421#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\Generators.cs",
+              "ToolTip": "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\Generators.cs",
               "RelativeToolTip": "TranslationOfInformationUnitsLib\\Generators.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -43,42 +43,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "WorkWithResults.cs",
-              "DocumentMoniker": "D:\\\u0421#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\WorkWithResults.cs",
+              "DocumentMoniker": "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\WorkWithResults.cs",
               "RelativeDocumentMoniker": "TranslationOfInformationUnitsLib\\WorkWithResults.cs",
-              "ToolTip": "D:\\\u0421#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\WorkWithResults.cs",
+              "ToolTip": "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\WorkWithResults.cs",
               "RelativeToolTip": "TranslationOfInformationUnitsLib\\WorkWithResults.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwDYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T17:46:20.89Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BaseClasses.cs",
-              "DocumentMoniker": "D:\\\u0421#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\BaseClasses.cs",
+              "DocumentMoniker": "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\BaseClasses.cs",
               "RelativeDocumentMoniker": "TranslationOfInformationUnitsLib\\BaseClasses.cs",
-              "ToolTip": "D:\\\u0421#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\BaseClasses.cs",
+              "ToolTip": "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\BaseClasses.cs",
               "RelativeToolTip": "TranslationOfInformationUnitsLib\\BaseClasses.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T17:44:22.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T17:44:22.849Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "WorkWithTasks.cs",
-              "DocumentMoniker": "D:\\\u0421#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\WorkWithTasks.cs",
+              "DocumentMoniker": "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\WorkWithTasks.cs",
               "RelativeDocumentMoniker": "TranslationOfInformationUnitsLib\\WorkWithTasks.cs",
-              "ToolTip": "D:\\\u0421#_study\\TestingApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\WorkWithTasks.cs",
+              "ToolTip": "D:\\Project\\TestApplication\\TranslationOfInformationUnitsLib\\TranslationOfInformationUnitsLib\\WorkWithTasks.cs",
               "RelativeToolTip": "TranslationOfInformationUnitsLib\\WorkWithTasks.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T14:55:01.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-01T14:55:01.733Z"
             }
           ]
         }

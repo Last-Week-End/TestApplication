@@ -9,8 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="1.jpg" />
-    <None Remove="2.png" />
     <None Remove="3.png" />
     <None Remove="Снимок.PNG" />
   </ItemGroup>
@@ -26,8 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="1.jpg" />
-    <Resource Include="2.png" />
     <Resource Include="3.png" />
     <Resource Include="Снимок.PNG" />
   </ItemGroup>

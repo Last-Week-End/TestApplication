@@ -26,6 +26,7 @@ namespace TestingAppInterface
             {
                 ResultGrid.Items.Add(taskResult);
             }
+            CountCorrectAnswerTextBlock.Text = $"Правильных ответов: {CountCorrectAnswer.Count(_results)}/20";
         }
 
 
@@ -62,9 +63,5 @@ namespace TestingAppInterface
 
         }
 
-        private void AnswerGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }

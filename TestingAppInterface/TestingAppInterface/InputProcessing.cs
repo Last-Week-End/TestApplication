@@ -23,19 +23,20 @@ namespace TestingAppInterface
             if (string.IsNullOrEmpty(text))
                 return;
 
-            // Проверяем, является ли последний символ недопустимым
-            char lastChar = text[text.Length - 1];
-            if (!char.IsDigit(lastChar) && !IsAllowedSymbol(lastChar))
+            if(!long.TryParse(textBox.Text, out var value))
             {
-                // Удаляем последний символ
-                textBox.Text = text.Substring(0, text.Length - 1);
-                // Перемещаем курсор в конец текста
-                textBox.SelectionStart = textBox.Text.Length;
+                if (!IsAllowedSymbol(textBox.Text))
+                {
+                    // Удаляем последний символ
+                    textBox.Text = text.Substring(0, text.Length - 1);
+                    // Перемещаем курсор в конец текста
+                    textBox.SelectionStart = textBox.Text.Length;
+                }
             }
         }
-        static bool IsAllowedSymbol(char symbol)
+        static bool IsAllowedSymbol(string symbol)
         {
-            return symbol == '>' || symbol == '<' || symbol == '=';
+            return symbol == ">" || symbol == "<" || symbol == "=";
         }
     }
 }

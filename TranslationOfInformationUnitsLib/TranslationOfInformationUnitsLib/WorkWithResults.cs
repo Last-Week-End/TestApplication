@@ -52,11 +52,11 @@ namespace TranslationOfInfUnits
             IsCorrect = isCorrect;
         }
     }
-    public class CountCorrectAnswer
+    public static class CountCorrectAnswer
     {
-        public int count;
-        public int Count(List<TaskResult> testData)
+        public static int Count(List<TaskResult> testData)
         {
+            int count = 0;
             for (int i = 0; i < testData.Count; i++)
             {
                 if (testData[i].IsCorrect) count++;
