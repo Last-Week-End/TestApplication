@@ -14,7 +14,7 @@
             <!-- TextBlock with long text -->
             <Image Source="/3.png" Canvas.Left="-20" HorizontalAlignment="Left" VerticalAlignment="Center" Height="500" Width="1000" RenderTransformOrigin="0.5,0.5"/>
             <!-- DataGrid -->
-            <DataGrid x:Name="ResultGrid" AutoGenerateColumns="False" 
+            <!--<DataGrid x:Name="ResultGrid" AutoGenerateColumns="False" 
                   Canvas.Left="10" Canvas.Top="10" Canvas.Right="40" Canvas.Bottom="281" 
                     HorizontalAlignment="Center" Height="271" VerticalAlignment="Top" 
                     Width="780" IsReadOnly="True">
@@ -54,10 +54,31 @@
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
                 </DataGrid.Columns>
+            </DataGrid>-->
+            <DataGrid x:Name="ResultGrid" Style="{StaticResource ResultDataGridStyle}"
+                  Canvas.Left="10" Canvas.Top="10" Canvas.Right="40" Canvas.Bottom="281" 
+                    Height="271" Width="780">
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="TaskData" Header="Задание" Binding="{Binding ExerciseData}" Width="*">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock" BasedOn="{StaticResource DataGridTextBlockStyle}"/>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn x:Name="YourAnswer" Header="Ваш ответ" Binding="{Binding UserAnswer}" Width="*">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock" BasedOn="{StaticResource DataGridTextBlockStyle}"/>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn x:Name="CorrectAnswer" Header="Правильный ответ" Binding="{Binding CorrectAnswer}" Width="*">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock" BasedOn="{StaticResource DataGridTextBlockStyle}"/>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
             </DataGrid>
 
             <!-- Button "Вернутся в главное меню" -->
-            <Button Content="Вернутся в главное меню" Click="Button_Click" VerticalAlignment="Top" 
+            <!--<Button Content="Вернутся в главное меню" Click="Button_Click" VerticalAlignment="Top" 
                 FontFamily="Bahnschrift Light" Foreground="White" 
                 Background="Red" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Padding="10"
                 Height="86" Canvas.Left="34" Canvas.Top="349" Opacity="0.98" FontSize="16">
@@ -66,8 +87,12 @@
                         <Setter Property="CornerRadius" Value="25"/>
                     </Style>
                 </Button.Resources>
-            </Button>
-            <TextBlock x:Name="CountCorrectAnswerTextBlock" TextWrapping="Wrap" Text="Правильных ответов: 0/20" Canvas.Left="529" Canvas.Top="286" Height="65" Width="261" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Background="White" FontFamily="Bahnschrift Light"/>
+            </Button>-->
+            <Button x:Name="ReturnToMainMenu" Content="Вернутся в главное меню" Click="Button_Click" 
+        Style="{StaticResource ReturnToMainMeny}" Grid.Column="1" Canvas.Left="10" Canvas.Top="177"/>
+            <TextBlock x:Name="CountCorrectAnswerTextBlock" Text="Правильных ответов: 0/20" Style="{StaticResource ExerciseTextBlockStyle}"
+       Canvas.Left="490" Canvas.Top="286" Height="75" Width="300"/>
+            <!--<TextBlock x:Name="CountCorrectAnswerTextBlock" TextWrapping="Wrap" Text="Правильных ответов: 0/20" Canvas.Left="529" Canvas.Top="286" Height="65" Width="261" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Background="White" FontFamily="Bahnschrift Light"/>-->
 
         </Canvas>
     </Viewbox>

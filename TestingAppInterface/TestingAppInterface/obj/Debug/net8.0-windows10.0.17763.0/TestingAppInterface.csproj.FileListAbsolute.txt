@@ -96,3 +96,4 @@ D:\С#_study\TestingApplication\TestingAppInterface\TestingAppInterface\obj\Debu
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\Testing.g.cs
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\App.baml
 D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\Testing.baml
+D:\Project\TestApplication\TestingAppInterface\TestingAppInterface\obj\Debug\net8.0-windows10.0.17763.0\TestingAppInterface_Content.g.cs

@@ -18,7 +18,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <!-- Базовый стиль для кнопок -->
+    <!-- Базовый стиль для кнопок в главном меню -->
     <Style x:Key="BaseButtonStyle" TargetType="Button">
         <Setter Property="FontFamily" Value="Bahnschrift Light"/>
         <Setter Property="FontSize" Value="24"/>
@@ -55,6 +55,306 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+    
+    <Style x:Key="ExerciseTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="FontFamily" Value="Bahnschrift Light"/>
+        <Setter Property="FontSize" Value="32"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <!-- Стиль для TextBox -->
+    <Style x:Key="AnswerTextBoxStyle" TargetType="TextBox">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="FontSize" Value="32"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    <!-- Стиль общий для кнопок Тест и Тренировка-->
+    <Style x:Key="ButtonStyle" TargetType="Button">
+        <Setter Property="FontFamily" Value="Bahnschrift Light"/>
+        <Setter Property="Opacity" Value="0.82"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+        <Setter Property="Background" Value="#FF0032FF"/>
+        <Setter Property="Height" Value="69"/>
+        <Setter Property="Width" Value="184"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+                x:Name="border" 
+                Background="{TemplateBinding Background}" 
+                BorderBrush="{TemplateBinding BorderBrush}" 
+                BorderThickness="{TemplateBinding BorderThickness}">
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- Триггер для состояния наведения -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="DarkBlue"/>
+                        </Trigger>
+                        <!-- Триггер для состояния нажатия -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="RoyalBlue"/>
+                        </Trigger>
+                        <!-- Триггер для состояния фокуса -->
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="Black"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Стиль для Кнопки "Следующее задание" Тест-->
+
+    <Style x:Key="NextButtonStyle" BasedOn="{StaticResource ButtonStyle}" TargetType="Button">
+        <Setter Property="Background" Value="Blue"/>
+        <Setter Property="Height" Value="67"/>
+        <Setter Property="Width" Value="187"/>
+        <Setter Property="RenderTransformOrigin" Value="0.07,0.215"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+            x:Name="border" 
+            CornerRadius="25" 
+            Background="{TemplateBinding Background}" 
+            BorderBrush="{TemplateBinding BorderBrush}" 
+            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- Триггер для состояния наведения -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF919BF9"/>
+                        </Trigger>
+                        <!-- Триггер для состояния нажатия -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF3469F3"/>
+                        </Trigger>
+                        <!-- Триггер для состояния фокуса -->
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF0349CC"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Стиль для Кнопки "Предыдущее задание" Тест-->
+    
+    <Style x:Key="PreviousButtonStyle" BasedOn="{StaticResource ButtonStyle}" TargetType="Button">
+        <Setter Property="Background" Value="Gray"/>
+        <Setter Property="Height" Value="67"/>
+        <Setter Property="Width" Value="187"/>
+        <Setter Property="RenderTransformOrigin" Value="0.07,0.215"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+        x:Name="border" 
+        CornerRadius="25" 
+        Background="{TemplateBinding Background}" 
+        BorderBrush="{TemplateBinding BorderBrush}" 
+        BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- Триггер для состояния наведения -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FFE6E6E6"/>
+                        </Trigger>
+                        <!-- Триггер для состояния нажатия -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FFCCCCCC"/>
+                        </Trigger>
+                        <!-- Триггер для состояния фокуса -->
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="DarkGray"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Стиль для Кнопки "Ответить" Тренировка-->
+    <Style x:Key="AnswerButton" BasedOn="{StaticResource ButtonStyle}" TargetType="Button">
+        <Setter Property="Background" Value="Gray"/>
+        <Setter Property="Height" Value="44"/>
+        <Setter Property="Width" Value="146"/>
+        <Setter Property="RenderTransformOrigin" Value="0.07,0.215"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+            x:Name="border" 
+            CornerRadius="25" 
+            Background="{TemplateBinding Background}" 
+            BorderBrush="{TemplateBinding BorderBrush}" 
+            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- Триггер для состояния наведения -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FFE6E6E6"/>
+                        </Trigger>
+                        <!-- Триггер для состояния нажатия -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FFCCCCCC"/>
+                        </Trigger>
+                        <!-- Триггер для состояния фокуса -->
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="DarkGray"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Стиль для Кнопки "Следующее задание" Тренировка-->
+    <Style x:Key="NextTaskTrainingStyle" BasedOn="{StaticResource ButtonStyle}" TargetType="Button">
+        <Setter Property="Background" Value="Blue"/>
+        <Setter Property="Height" Value="44"/>
+        <Setter Property="Width" Value="146"/>
+        <Setter Property="RenderTransformOrigin" Value="0.07,0.215"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+        x:Name="border" 
+        CornerRadius="25" 
+        Background="{TemplateBinding Background}" 
+        BorderBrush="{TemplateBinding BorderBrush}" 
+        BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- Триггер для состояния наведения -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF919BF9"/>
+                        </Trigger>
+                        <!-- Триггер для состояния нажатия -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF3469F3"/>
+                        </Trigger>
+                        <!-- Триггер для состояния фокуса -->
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF0349CC"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Стиль для Кнопки "Закончить тренировку"-->
+    <Style x:Key="FinishTrainingStyle" BasedOn="{StaticResource ButtonStyle}" TargetType="Button">
+        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Height" Value="44"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="RenderTransformOrigin" Value="0.07,0.215"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+        x:Name="border" 
+        CornerRadius="25" 
+        Background="{TemplateBinding Background}" 
+        BorderBrush="{TemplateBinding BorderBrush}" 
+        BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- Триггер для состояния наведения -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FFFF4141"/>
+                        </Trigger>
+                        <!-- Триггер для состояния нажатия -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FFC33030"/>
+                        </Trigger>
+                        <!-- Триггер для состояния фокуса -->
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF8D0A0A"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Стиль для кнопки "Завершить тест" -->
+    <Style x:Key="FinishButtonStyle" BasedOn="{StaticResource ButtonStyle}" TargetType="Button">
+        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Height" Value="67"/>
+        <Setter Property="Width" Value="172"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+    x:Name="border" 
+    CornerRadius="25" 
+    Background="{TemplateBinding Background}" 
+    BorderBrush="{TemplateBinding BorderBrush}" 
+    BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter 
+        HorizontalAlignment="Center" 
+        VerticalAlignment="Center" 
+        RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- Триггер для состояния наведения -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FFFF4141"/>
+                        </Trigger>
+                        <!-- Триггер для состояния нажатия -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FFC33030"/>
+                        </Trigger>
+                        <!-- Триггер для состояния фокуса -->
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF8D0A0A"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!-- Стиль для TaskCounterTextBlock -->
+    <Style x:Key="TaskCounterTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Foreground" Value="#FF0032FF"/>
+        <Setter Property="FontFamily" Value="Bahnschrift Light"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        
     </Style>
 
     <!-- Стиль для кнопки "Начать Тренировку" -->
@@ -133,6 +433,43 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!-- Стиль для кнопки "Вернутся в меню" -->
+    <Style x:Key="ReturnToMainMeny" BasedOn="{StaticResource BaseButtonStyle}" TargetType="Button">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Margin" Value="0,145,-12,0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+                x:Name="border" 
+                CornerRadius="25" 
+                Background="{TemplateBinding Background}" 
+                BorderBrush="{TemplateBinding BorderBrush}" 
+                BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- Триггер для состояния наведения -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FFFF4141"/>
+                        </Trigger>
+                        <!-- Триггер для состояния нажатия -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FFC33030"/>
+                        </Trigger>
+                        <!-- Триггер для состояния фокуса -->
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF8D0A0A"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
     <Style x:Key="HeaderStyle" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
@@ -148,6 +485,31 @@
         <Setter Property="Width" Value="597"/>
         <Setter Property="Foreground" Value="#FF020101"/>
         <Setter Property="Background" Value="White"/>
+    </Style>
+    <Style x:Key="ResultDataGridStyle" TargetType="DataGrid">
+        <Setter Property="AutoGenerateColumns" Value="False"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="IsReadOnly" Value="True"/>
+        <Setter Property="RowStyle">
+            <Setter.Value>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsCorrect}" Value="True">
+                            <Setter Property="Background" Value="#FF21DC21"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsCorrect}" Value="False">
+                            <Setter Property="Background" Value="#FFFF3838"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Стиль для DataGridTextColumn -->
+    <Style x:Key="DataGridTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 </ResourceDictionary>
 

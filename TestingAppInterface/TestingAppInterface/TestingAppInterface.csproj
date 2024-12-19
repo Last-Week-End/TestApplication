@@ -6,11 +6,17 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <PackageIcon></PackageIcon>
+    <ApplicationIcon>icons8-учебник-по-информатике-50.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="3.png" />
     <None Remove="Снимок.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icons8-учебник-по-информатике-50.ico" />
   </ItemGroup>
 
   <ItemGroup>
